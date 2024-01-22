@@ -1,11 +1,11 @@
 name: Java CI
-run: chmod +x ./gradlew
 
 on:
   - push
+  - pull_request
 
 permissions:
-  contents: read
+  read-all
 
 jobs:
   build:
