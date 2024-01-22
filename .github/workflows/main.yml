@@ -6,6 +6,7 @@ on:
 
 permissions:
   read-all
+  write-all
 
 jobs:
   build:
