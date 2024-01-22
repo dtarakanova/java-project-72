@@ -1,4 +1,5 @@
 name: Java CI
+run: chmod +x ./gradlew
 
 on:
   - push
