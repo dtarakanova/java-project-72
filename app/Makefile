@@ -1,17 +1,13 @@
 .DEFAULT_GOAL := build-run
 
-build:
-       ./gradlew build
+build:	./gradlew build
 
-test:
-       ./gradlew test
+test:	./gradlew test
 
-clean:
-       ./gradlew clean
+clean:	./gradlew clean
 
-lint:
-       ./gradlew checkstyleMain checkstyleTest
+lint:	./gradlew checkstyleMain checkstyleTest
 
-build-run: build run
+build-run:	build run
 
-.PHONY: build
+.PHONY:	build
