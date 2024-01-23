@@ -1,11 +1,18 @@
-build:	make -C app build
+.DEFAULT_GOAL := build-run
 
-lint:	make -C app lint
+run-dist:
+    make -C app run-dist
 
-build-run:	make -C app build run
+build:
+    make -C app build
 
-test:	make -C app test
+run:
+    make -C app run
 
-report:	make -C app report
+test:
+    make -C app test
 
-.PHONY:	build
+report:
+    make -C app report
+
+.PHONY: build
