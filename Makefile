@@ -5,12 +5,14 @@ build:
 
 lint:
     make -C app lint
-build-run: build run
+
+build-run: 
+    make -C app build run
 
 test:
-	./gradlew test
+    make -C app test
 
 report:
-	@./gradlew jacocoTestReport
+    make -C app report
 
 .PHONY: build
