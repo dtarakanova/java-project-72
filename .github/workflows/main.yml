@@ -20,6 +20,7 @@ jobs:
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
         with:
+          gradle-version: 7.4
           arguments: build
           build-root-directory: app
       - run: make lint
