@@ -12,12 +12,12 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v3
         with:
-          java-version: '20'
+          java-version: '17'
           distribution: 'temurin'
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
         with:
-          gradle-version: 8.3
+          gradle-version: 7.4
       - run: ./gradlew checkstyleMain
       - run: ./gradlew test
 
