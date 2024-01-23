@@ -1,5 +1,3 @@
-.DEFAULT_GOAL := build-run
-
 build:	./gradlew build
 
 test:	./gradlew test
