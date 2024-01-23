@@ -26,7 +26,7 @@ jobs:
         with:
           arguments: build
           build-root-directory: app
-            - name: Publish code coverage
+      - name: Publish code coverage
         if: ${{ github.event_name == 'push' }}
         uses: paambaati/codeclimate-action@v5.0.0
         env:
