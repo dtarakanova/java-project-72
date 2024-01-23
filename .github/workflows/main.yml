@@ -22,8 +22,8 @@ jobs:
         with:
           arguments: build
           build-root-directory: app
-      - run: lint
-      - run: test
+      - run: make lint
+      - run: make test
 
       - name: Publish code coverage
         uses: paambaati/codeclimate-action@v2.7.4
