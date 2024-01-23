@@ -4,13 +4,13 @@ build:
        ./gradlew build
 
 test:
-    ./gradlew test
+       ./gradlew test
 
 clean:
-    ./gradlew clean
+       ./gradlew clean
 
 lint:
-    ./gradlew checkstyleMain checkstyleTest
+       ./gradlew checkstyleMain checkstyleTest
 
 build-run: build run
 
