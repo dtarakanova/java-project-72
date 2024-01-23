@@ -18,8 +18,8 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           gradle-version: 7.4
-      - run: /app/gradlew checkstyleMain
-      - run: /app/gradlew test
+      - run: ./app/gradlew checkstyleMain
+      - run: ./app/gradlew test
       - name: Publish code coverage
         uses: paambaati/codeclimate-action@v2.7.4
         env:
