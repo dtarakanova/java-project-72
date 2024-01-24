@@ -17,7 +17,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '20'
+          java-version: '17'
           distribution: 'temurin'
       - name: Run chmod to make gradlew executable
         run: chmod +x ./app/gradlew
