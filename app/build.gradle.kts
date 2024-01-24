@@ -17,16 +17,27 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
+jacoco {
+    toolVersion = "0.8.7"
+}
+
+test {
+    finalizedBy jacocoTestReport
+}
+
+/*
 tasks.test {
     useJUnitPlatform()
 }
+tasks.jacocoTestReport { reports { xml.required.set(true) } }
+*/
 
-jacoco {
-    toolVersion = "0.8.8"
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled true
+        csv.enabled false
+    }
 }
 
-tasks.jacocoTestReport {
-     reports {
-         xml.required.set(true)
-     }
-     }
+check.dependsOn jacocoTestCoverageVerification
