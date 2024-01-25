@@ -25,12 +25,6 @@ test {
     finalizedBy jacocoTestReport
 }
 
-/*
-tasks.test {
-    useJUnitPlatform()
-}
-tasks.jacocoTestReport { reports { xml.required.set(true) } }
-*/
 
 jacocoTestReport {
     reports {
