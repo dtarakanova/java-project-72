@@ -27,6 +27,7 @@ jobs:
           arguments: build
           build-root-directory: app
       - name: Coverage report building
+        env:
           JACOCO_SOURCE_PATH: app/src/main/java 
         with: ./cc-test-reporter
           format-coverage: target/site/jacoco/jacoco.xml 
