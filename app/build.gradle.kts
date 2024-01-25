@@ -25,8 +25,14 @@ jacoco {
     toolVersion = "0.8.8"
 }
 
-tasks.jacocoTestReport {
-     reports {
-         xml.required.set(true)
-     }
-     }
+test {
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled true
+        csv.enabled false
+    }
+}
