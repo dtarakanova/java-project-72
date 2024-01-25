@@ -26,8 +26,11 @@ jobs:
         with:
           arguments: build
           build-root-directory: app
+          
+      - name: Code coverage 1
+        uses: paambaati/codeclimate-action@v2.7.4
 
-      - name: Code coverage
+      - name: Code coverage 2
         run: JACOCO_SOURCE_PATH=app/src/main/java ./cc-test-reporter format-coverage target/site/jacoco/jacoco.xml --input-type jacoco
 
       - name: Upload code coverage
