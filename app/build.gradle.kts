@@ -29,10 +29,8 @@ test {
     finalizedBy jacocoTestReport
 }
 
-jacocoTestReport {
+tasks.jacocoTestReport {
     reports {
-        xml.enabled true
-        html.enabled true
-        csv.enabled false
+        xml.required.set(true)
     }
 }
