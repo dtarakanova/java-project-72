@@ -25,9 +25,6 @@ jacoco {
     toolVersion = "0.8.8"
 }
 
-test {
-    finalizedBy jacocoTestReport
-}
 
 tasks.jacocoTestReport {
     reports {
