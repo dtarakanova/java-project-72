@@ -28,7 +28,7 @@ jobs:
           build-root-directory: app
           
       - name: Code coverage
-        run: JACOCO_SOURCE_PATH=app/src/main/java ./cc-test-reporter format-coverage target/site/jacoco/jacoco.xml --input-type jacoco
+        run: JACOCO_SOURCE_PATH=/src/main/java ./cc-test-reporter format-coverage target/site/jacoco/jacoco.xml --input-type jacoco
 
       - name: Upload code coverage
         run: ./cc-test-reporter upload-coverage $CC_TEST_REPORTER_ID        
