@@ -23,6 +23,7 @@ dependencies {
     implementation("io.javalin:javalin-rendering:5.6.2")
 }
 
+
 application {
     mainClass.set("hexlet.code.App")
 }
