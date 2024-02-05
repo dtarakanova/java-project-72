@@ -16,7 +16,7 @@ public class App {
     public static Javalin getApp() throws IOException, SQLException {
 
         var app = Javalin.create(config -> config.plugins.enableDevLogging());
-        app.get("/", ctx -> ctx.result("Hello, World"));
+        app.get("/", ctx -> ctx.result("Hello World"));
 
         return app;
     }
