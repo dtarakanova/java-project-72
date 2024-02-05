@@ -4,8 +4,10 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
-        <option name="gradleJvm" value="corretto-17 (WSL)" />
+        <option name="gradleHome" value="/home/pelmen/.asdf/installs/gradle/8.2" />
+        <option name="gradleJvm" value="corretto-20 (WSL)" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/app" />
