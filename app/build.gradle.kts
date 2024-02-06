@@ -36,14 +36,16 @@ application {
 
 tasks.test {
     useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport)
 }
 
 jacoco {
-    toolVersion = "0.8.8"
+    toolVersion = "0.8.11"
 }
 
 
 tasks.jacocoTestReport {
+    //dependsOn test
     reports {
         xml.required.set(true)
     }
