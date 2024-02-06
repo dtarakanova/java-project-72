@@ -21,4 +21,7 @@ report:
 build-run:
 	build run
 
+start:
+    APP_ENV=development ./gradlew run
+
 .PHONY: build
