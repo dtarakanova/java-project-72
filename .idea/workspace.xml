@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Gitignore update">
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Dockerfile update">
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +42,13 @@
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -342,7 +350,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707319216606</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Dockerfile update">
+      <created>1707378475552</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1707378475552</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Dockerfile update">
+      <created>1707379165861</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1707379165861</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -359,13 +381,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add dockerfile" />
     <MESSAGE value="README.md" />
-    <MESSAGE value="Dockerfile update" />
     <MESSAGE value="build file update" />
     <MESSAGE value="dockerfile update" />
     <MESSAGE value="Gradle &amp; Java vesrions update" />
     <MESSAGE value="Build update" />
     <MESSAGE value="Makefile update" />
     <MESSAGE value="Gitignore update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gitignore update" />
+    <MESSAGE value="Dockerfile update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dockerfile update" />
   </component>
 </project>
