@@ -12,6 +12,9 @@ run:
 test:
 	make -C app test
 
+lint:
+	make -C app lint
+
 report:
 	make -C app report
 
