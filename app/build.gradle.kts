@@ -21,6 +21,8 @@ repositories {
 }
 
 dependencies {
+    implementation("com.h2database:h2:2.2.222")
+    implementation("com.zaxxer:HikariCP:5.0.1")
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     implementation("org.slf4j:slf4j-simple:2.0.9")
@@ -45,7 +47,6 @@ jacoco {
 
 
 tasks.jacocoTestReport {
-    //dependsOn test
     reports {
         xml.required.set(true)
     }
