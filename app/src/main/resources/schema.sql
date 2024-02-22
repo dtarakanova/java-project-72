@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS urls;
 
 CREATE TABLE urls
 (
-id          PRIMARY KEY,
+id          INT PRIMARY KEY,
 name        VARCHAR(255),
 created_at  TIMESTAMP
 );
