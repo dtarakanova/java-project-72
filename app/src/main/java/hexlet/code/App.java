@@ -60,7 +60,7 @@ public class App {
         JavalinJte.init(createTemplateEngine());
 
         var app = Javalin.create(config -> config.plugins.enableDevLogging());
-        app.get("/", ctx -> ctx.result("Hello World"));
+        app.get("/", ctx -> ctx.render("index.jte"));
 
         return app;
     }
