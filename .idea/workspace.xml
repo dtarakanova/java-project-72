@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Fix table issue">
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="JTE setup">
+      <change afterPath="$PROJECT_DIR$/app/src/main/resources/templates/index.jte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -418,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708587424651</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="JTE setup">
+      <created>1708668609439</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1708668609439</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -445,6 +452,7 @@
     <MESSAGE value="README.md update" />
     <MESSAGE value="DB connection establish" />
     <MESSAGE value="Fix table issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix table issue" />
+    <MESSAGE value="JTE setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="JTE setup" />
   </component>
 </project>
