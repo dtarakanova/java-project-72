@@ -4,7 +4,6 @@ import com.zaxxer.hikari.HikariDataSource;
 import gg.jte.ContentType;
 import gg.jte.TemplateEngine;
 import gg.jte.resolve.ResourceCodeResolver;
-import hexlet.code.model.Url;
 import hexlet.code.repository.BaseRepository;
 import io.javalin.Javalin;
 
