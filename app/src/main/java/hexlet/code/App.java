@@ -6,7 +6,6 @@ import gg.jte.TemplateEngine;
 import gg.jte.resolve.ResourceCodeResolver;
 import hexlet.code.controller.UrlsController;
 import hexlet.code.repository.BaseRepository;
-import hexlet.code.repository.DataRepository;
 import io.javalin.Javalin;
 
 import java.io.BufferedReader;
