@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="JTE setup">
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/templates/index.jte" afterDir="false" />
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Add main page template">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/index.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/index.jte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -425,7 +427,21 @@
       <option name="project" value="LOCAL" />
       <updated>1708668609439</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Add main page template">
+      <created>1708669139768</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1708669139768</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Add main page template">
+      <created>1708669186844</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1708669186844</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -453,6 +469,7 @@
     <MESSAGE value="DB connection establish" />
     <MESSAGE value="Fix table issue" />
     <MESSAGE value="JTE setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="JTE setup" />
+    <MESSAGE value="Add main page template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add main page template" />
   </component>
 </project>
