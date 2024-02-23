@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Add and configure form for url input" />
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Fix checkstyle error">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/Url.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/Url.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -450,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708686033313</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Fix checkstyle error">
+      <created>1708686162571</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1708686162571</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -480,6 +493,7 @@
     <MESSAGE value="JTE setup" />
     <MESSAGE value="Add main page template" />
     <MESSAGE value="Add and configure form for url input" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add and configure form for url input" />
+    <MESSAGE value="Fix checkstyle error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix checkstyle error" />
   </component>
 </project>
