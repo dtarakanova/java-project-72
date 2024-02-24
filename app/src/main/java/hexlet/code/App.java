@@ -50,7 +50,6 @@ public class App {
         HikariDataSource dataSource = new HikariDataSource(hikariConfig);
         String sql = readResourceFile("schema.sql");
         log.info(sql);
-        log.info(hikariConfig.getJdbcUrl());
 
         try (var connection = dataSource.getConnection();
              var statement = connection.createStatement()) {
@@ -58,9 +57,9 @@ public class App {
         }
         BaseRepository.dataSource = dataSource;
 
-        JavalinJte.init(createTemplateEngine());
 
         var app = Javalin.create(config -> config.plugins.enableDevLogging());
+        JavalinJte.init(createTemplateEngine());
         app.get("/", ctx -> ctx.render("index.jte"));
         app.post("/urls", UrlsController::createUrl);
         return app;
