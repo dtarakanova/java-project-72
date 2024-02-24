@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Save url to database">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" afterDir="false" />
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Fix checkstyle issue">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -473,7 +473,28 @@
       <option name="project" value="LOCAL" />
       <updated>1708688044479</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Fix checkstyle issue">
+      <created>1708688174935</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1708688174935</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Fix checkstyle issue">
+      <created>1708688352588</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1708688352588</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Fix checkstyle issue">
+      <created>1708688367096</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1708688367096</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -505,6 +526,7 @@
     <MESSAGE value="Add and configure form for url input" />
     <MESSAGE value="Fix checkstyle error" />
     <MESSAGE value="Save url to database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save url to database" />
+    <MESSAGE value="Fix checkstyle issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix checkstyle issue" />
   </component>
 </project>

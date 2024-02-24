@@ -3,7 +3,7 @@
 <a href="https://codeclimate.com/github/dtarakanova/java-project-72/test_coverage"><img src="https://api.codeclimate.com/v1/badges/6cc189c995611af7e0ee/test_coverage" /></a>
 <br/><br/>
 
-### Project demo
+### Project demoo
 [VIEW PROJECT DEMO](https://page-analyzer-elmt.onrender.com/)
 <br/><br/>
 
