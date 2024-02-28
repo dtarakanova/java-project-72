@@ -4,9 +4,7 @@ import hexlet.code.model.UrlsPage;
 import hexlet.code.repository.DataRepository;
 import io.javalin.http.Context;
 
-import javax.swing.text.AbstractDocument;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
