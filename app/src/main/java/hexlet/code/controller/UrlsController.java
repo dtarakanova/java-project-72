@@ -20,6 +20,6 @@ public class UrlsController {
     public static void showUrls(Context ctx) throws SQLException {
         List<Url> urls = DataRepository.getEntities();
         UrlsPage page = new UrlsPage(urls);
-        ctx.render("urlsindex.jte", Collections.singletonMap("page", page));
+        ctx.render("templates/urls/urlsindex.jte", Collections.singletonMap("page", page));
     }
 }
