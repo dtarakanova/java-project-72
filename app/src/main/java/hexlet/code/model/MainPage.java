@@ -1,4 +1,4 @@
 package hexlet.code.model;
 
-public class MainPage extends BasicPage{
+public class MainPage extends BasicPage {
 }

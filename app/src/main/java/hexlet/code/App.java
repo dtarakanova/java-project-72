@@ -5,8 +5,6 @@ import gg.jte.ContentType;
 import gg.jte.TemplateEngine;
 import gg.jte.resolve.ResourceCodeResolver;
 import hexlet.code.controller.UrlsController;
-import hexlet.code.model.Url;
-import hexlet.code.model.UrlsPage;
 import hexlet.code.repository.BaseRepository;
 import io.javalin.Javalin;
 
@@ -15,7 +13,6 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.sql.SQLException;
-import java.util.List;
 import java.util.stream.Collectors;
 
 import io.javalin.rendering.template.JavalinJte;
