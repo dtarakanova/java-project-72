@@ -61,7 +61,7 @@ public class App {
 
         var app = Javalin.create(config -> config.plugins.enableDevLogging());
         JavalinJte.init(createTemplateEngine());
-        app.get("/", ctx -> ctx.render("templates/index.jte"));
+        app.get("/", ctx -> ctx.render("jte/index.jte"));
         app.post("/urls", UrlsController::createUrl);
         app.get("/urls", UrlsController::showUrls);
 
