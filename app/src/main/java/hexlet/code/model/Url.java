@@ -10,7 +10,7 @@ import java.sql.Timestamp;
 @Setter
 @ToString
 
-public class Url {
+public class Url extends BasicPage{
     private Long id;
     private String name;
     private Timestamp createdAt;
