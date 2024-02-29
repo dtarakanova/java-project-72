@@ -10,6 +10,6 @@ public class MainPageController {
         MainPage page = new MainPage();
         page.setFlash(ctx.consumeSessionAttribute("flash"));
         page.setFlashType(ctx.consumeSessionAttribute("flash-type"));
-        ctx.render("index.jte", Collections.singletonMap("page", page));
+        ctx.render("app/src/main/resources/templates/index.jte", Collections.singletonMap("page", page));
     };
 }

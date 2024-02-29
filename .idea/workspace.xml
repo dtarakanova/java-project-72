@@ -233,13 +233,6 @@
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
     </task>
-    <task id="LOCAL-00002" summary="Add dockerfile">
-      <created>1706777260470</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1706777260470</updated>
-    </task>
     <task id="LOCAL-00003" summary="README.md">
       <created>1706777537941</created>
       <option name="number" value="00003" />
@@ -576,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709196014812</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="JTE paths fix">
+      <created>1709196371874</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1709196371874</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
