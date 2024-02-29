@@ -4,6 +4,7 @@ import com.zaxxer.hikari.HikariDataSource;
 import gg.jte.ContentType;
 import gg.jte.TemplateEngine;
 import gg.jte.resolve.ResourceCodeResolver;
+import hexlet.code.controller.MainPageController;
 import hexlet.code.controller.UrlsController;
 import hexlet.code.repository.BaseRepository;
 import io.javalin.Javalin;
@@ -61,7 +62,7 @@ public class App {
 
         var app = Javalin.create(config -> config.plugins.enableDevLogging());
         JavalinJte.init(createTemplateEngine());
-        app.get("/", ctx -> ctx.render("/jte/index.jte"));
+        app.get("/", MainPageController::welcomeMain);
         app.post("/urls", UrlsController::createUrl);
         app.get("/urls", UrlsController::showUrls);
 
