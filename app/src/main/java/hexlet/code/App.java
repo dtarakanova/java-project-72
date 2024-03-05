@@ -7,6 +7,7 @@ import gg.jte.resolve.ResourceCodeResolver;
 import hexlet.code.controller.MainPageController;
 import hexlet.code.controller.UrlsController;
 import hexlet.code.repository.BaseRepository;
+import hexlet.code.util.NamedRoutes;
 import io.javalin.Javalin;
 
 import java.io.BufferedReader;
@@ -62,9 +63,9 @@ public class App {
 
         var app = Javalin.create(config -> config.plugins.enableDevLogging());
         JavalinJte.init(createTemplateEngine());
-        app.get("/", MainPageController::welcomeMain);
-        app.post("/urls", UrlsController::createUrl);
-        app.get("/urls", UrlsController::showUrls);
+        app.get(NamedRoutes.mainPath(), MainPageController::welcomeMain);
+        app.post(NamedRoutes.urlsPath(), UrlsController::createUrl);
+        app.get(NamedRoutes.urlsPath(), UrlsController::showUrls);
 
         return app;
     }

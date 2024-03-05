@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="JTE paths fix">
-      <change afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/JteindexGenerated.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/JteindexGenerated.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/templates/.jteroot" afterDir="false" />
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Main &amp; Urls pages add">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/util/NamedRoutes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/index.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/index.jte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/page.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/layout/page.jte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/layout/page.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/layout/page.jte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,13 +243,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Dockerfile update">
-      <created>1706853743171</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1706853743171</updated>
     </task>
     <task id="LOCAL-00007" summary="Dockerfile update">
       <created>1706854046127</created>
@@ -592,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709263921100</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Main &amp; Urls pages add">
+      <created>1709629971223</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1709629971223</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -630,6 +625,7 @@
     <MESSAGE value="Set up jte templates and urls page" />
     <MESSAGE value="Remove checkstyle violations" />
     <MESSAGE value="JTE paths fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="JTE paths fix" />
+    <MESSAGE value="Main &amp; Urls pages add" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main &amp; Urls pages add" />
   </component>
 </project>
