@@ -33,7 +33,10 @@ public class UrlsController {
                         parsedUrl.getPort() == -1 ? "" : ":" + parsedUrl.getPort()
                 )
                 .toLowerCase();
-        if (DataRepository.isPresent(normalizedUrl)) {
+
+        Url url = DataRepository.isPresent(normalizedUrl).orElse(null);
+
+        if (url != null) {
             ctx.sessionAttribute("flash", "Страница уже существует");
             ctx.sessionAttribute("flashType", "warning");
         } else {

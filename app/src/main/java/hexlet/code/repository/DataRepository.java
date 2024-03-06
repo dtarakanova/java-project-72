@@ -10,6 +10,7 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class DataRepository extends BaseRepository {
     public static void save(Url url) throws SQLException {
@@ -47,13 +48,22 @@ public class DataRepository extends BaseRepository {
         }
     }
 
-    public static boolean isPresent(String url) throws SQLException {
+    public static Optional<Url> isPresent(String url) throws SQLException {
         String sql = "SELECT * FROM urls WHERE name = ?";
         try (var conn = dataSource.getConnection();
              var stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, url);
             var resultSet = stmt.executeQuery();
-            return resultSet.next();
+            if (resultSet.next()) {
+                String name = resultSet.getString("name");
+                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                long id = resultSet.getLong("id");
+                Url newUrl = new Url(name);
+                newUrl.setId(id);
+                newUrl.setCreatedAt(createdAt);
+                return Optional.of(newUrl);
+            }
+            return Optional.empty();
         }
     }
 }

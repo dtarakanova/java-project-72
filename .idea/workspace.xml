@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Add NamedRoutes.java &amp; refactor">
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Flash messages introduce">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/util/NamedRoutes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/util/NamedRoutes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/layout/page.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/layout/page.jte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlsindex.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlsindex.jte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,13 +248,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Dockerfile update">
-      <created>1706855511420</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1706855511420</updated>
     </task>
     <task id="LOCAL-00009" summary="Dockerfile update">
       <created>1707126821654</created>
@@ -596,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709631899262</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Flash messages introduce">
+      <created>1709712339214</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1709712339214</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -636,6 +632,7 @@
     <MESSAGE value="JTE paths fix" />
     <MESSAGE value="Main &amp; Urls pages add" />
     <MESSAGE value="Add NamedRoutes.java &amp; refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add NamedRoutes.java &amp; refactor" />
+    <MESSAGE value="Flash messages introduce" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flash messages introduce" />
   </component>
 </project>
