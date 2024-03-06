@@ -48,7 +48,6 @@ public class App {
 
     public static Javalin getApp() throws IOException, SQLException {
         var hikariConfig = new HikariConfig();
-       // hikariConfig.setDriverClassName(org.postgresql.Driver.class.getName());
         hikariConfig.setJdbcUrl(getDatabaseUrl());
         HikariDataSource dataSource = new HikariDataSource(hikariConfig);
         String sql = readResourceFile("schema.sql");
@@ -66,7 +65,6 @@ public class App {
         app.get(NamedRoutes.mainPath(), MainPageController::welcomeMain);
         app.post(NamedRoutes.urlsPath(), UrlsController::createUrl);
         app.get(NamedRoutes.urlsPath(), UrlsController::showUrls);
-
         return app;
     }
 

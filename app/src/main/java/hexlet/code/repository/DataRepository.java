@@ -13,7 +13,7 @@ import java.util.List;
 
 public class DataRepository extends BaseRepository {
     public static void save(Url url) throws SQLException {
-        String sql = "INSERT INTO urls(name, createdAt) VALUES(?,?)";
+        String sql = "INSERT INTO urls(name, created_at) VALUES(?,?)";
         try (var conn = dataSource.getConnection();
              var preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             preparedStatement.setString(1, url.getName());
@@ -23,7 +23,7 @@ public class DataRepository extends BaseRepository {
             if (generatedKeys.next()) {
                 url.setId(generatedKeys.getLong(1));
             } else {
-                throw new SQLException("DB have not returned an id after saving an entity");
+                throw new SQLException("DB have not returned an id after saving");
             }
         }
     }
@@ -44,6 +44,16 @@ public class DataRepository extends BaseRepository {
                 result.add(url);
             }
             return result;
+        }
+    }
+
+    public static boolean isPresent(String url) throws SQLException {
+        String sql = "SELECT * FROM urls WHERE name = ?";
+        try (var conn = dataSource.getConnection();
+             var stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, url);
+            var resultSet = stmt.executeQuery();
+            return resultSet.next();
         }
     }
 }

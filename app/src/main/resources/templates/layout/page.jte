@@ -33,12 +33,17 @@
     </ul>
 </div>
 </nav>
-
-
 <main class="flex-grow-1">
-    ${content}
+    @if(page != null && page.getFlash() != null)
+        <div class="rounded-0 m-0 alert alert-dismissible fade show alert-${page.getFlashType()}" role="alert">
+            <p class="m-0">${page.getFlash()}</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+    <section>
+        ${content}
+    </section>
 </main>
-
 <footer class="footer border-top py-1 mt-4 bg-light">
     <p class="text-dark bg-muted text-center">by <a href="https://github.com/dtarakanova" class="text-info">Pelmen</a></p>
 </footer>

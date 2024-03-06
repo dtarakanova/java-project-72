@@ -1,4 +1,5 @@
 @import hexlet.code.model.UrlsPage
+@import hexlet.code.util.NamedRoutes
 @param UrlsPage page
 
 !{var formatter = java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");}
@@ -8,7 +9,6 @@ page = page,
 content = @`
     <div class="container-lg mt-5">
         <h1>Сайты</h1>
-
         <table class="table table-bordered table-hover mt-3">
             <thead>
             <tr>
@@ -26,7 +26,7 @@ content = @`
                         ${url.getId()}
                     </td>
                     <td>
-                        <a href="/urls/" + id>${url.getName()}</a>
+                        <a href="${NamedRoutes.urlPath(url.getId())}">${url.getName()}</a>
                     </td>
                     <td>
                         Test 1
