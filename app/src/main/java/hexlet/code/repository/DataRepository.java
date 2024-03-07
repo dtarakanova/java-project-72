@@ -66,4 +66,22 @@ public class DataRepository extends BaseRepository {
             return Optional.empty();
         }
     }
+
+    public static Optional<Url> find(Long id) throws SQLException {
+        String sql = "SELECT * FROM urls WHERE id = ?";
+        try (Connection conn = dataSource.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setLong(1, id);
+            ResultSet resultSet = stmt.executeQuery();
+            if (resultSet.next()) {
+                String name = resultSet.getString("name");
+                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                Url url = new Url(name);
+                url.setId(id);
+                url.setCreatedAt(createdAt);
+                return Optional.of(url);
+            }
+            return Optional.empty();
+        }
+    }
 }

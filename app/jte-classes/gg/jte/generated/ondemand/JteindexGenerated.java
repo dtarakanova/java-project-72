@@ -3,11 +3,22 @@ import hexlet.code.model.MainPage;
 import hexlet.code.util.NamedRoutes;
 public final class JteindexGenerated {
 	public static final String JTE_NAME = "index.jte";
-	public static final int[] JTE_LINE_INFO = {0,0,1,3,3,3,5,5,8,8,15,15,15,15,15,15,15,15,15,34,34,34,34,34,3,3,3,3};
+	public static final int[] JTE_LINE_INFO = {0,0,1,3,3,3,5,5,8,8,9,9,10,10,10,10,11,11,11,13,13,20,20,20,20,20,20,20,20,20,39,39,39,39,39,3,3,3,3};
 	public static void render(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, MainPage page) {
 		jteOutput.writeContent("\r\n");
 		gg.jte.generated.ondemand.layout.JtepageGenerated.render(jteOutput, jteHtmlInterceptor, page, new gg.jte.html.HtmlContent() {
 			public void writeTo(gg.jte.html.HtmlTemplateOutput jteOutput) {
+				jteOutput.writeContent("\r\n    ");
+				if (page != null && page.getFlash() != null) {
+					jteOutput.writeContent("\r\n        <div class=\"rounded-0 m-0 alert alert-danger alert-");
+					jteOutput.setContext("div", "class");
+					jteOutput.writeUserContent(page.getFlashType());
+					jteOutput.setContext("div", null);
+					jteOutput.writeContent("\" role=\"alert\">\r\n            ");
+					jteOutput.setContext("div", null);
+					jteOutput.writeUserContent(page.getFlash());
+					jteOutput.writeContent("\r\n        </div>\r\n    ");
+				}
 				jteOutput.writeContent("\r\n    <section>\r\n        <div class=\"container-fluid bg-dark p-5\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-10 col-lg-8 mx-auto text-light\">\r\n                    <h1 class=\"display-3 mb-0\">Анализатор страниц</h1>\r\n                    <p class=\"lead\">Бесплатно проверяйте сайты на SEO пригодность</p>\r\n                    <form");
 				var __jte_html_attribute_0 = NamedRoutes.urlsPath();
 				if (gg.jte.runtime.TemplateUtils.isAttributeRendered(__jte_html_attribute_0)) {

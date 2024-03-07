@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Flash messages introduce">
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Flash messages issues fix">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlpage.jte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/JteindexGenerated$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/JteindexGenerated.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/JteindexGenerated.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/Url.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/Url.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/util/NamedRoutes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/util/NamedRoutes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/index.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/index.jte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/layout/page.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/layout/page.jte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlsindex.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlsindex.jte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -248,13 +258,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Dockerfile update">
-      <created>1707126821654</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1707126821654</updated>
     </task>
     <task id="LOCAL-00010" summary="build file update">
       <created>1707132957437</created>
@@ -592,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709712339214</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Flash messages issues fix">
+      <created>1709714256344</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1709714256344</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -608,7 +618,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add dockerfile" />
     <MESSAGE value="README.md" />
     <MESSAGE value="build file update" />
     <MESSAGE value="dockerfile update" />
@@ -633,6 +642,7 @@
     <MESSAGE value="Main &amp; Urls pages add" />
     <MESSAGE value="Add NamedRoutes.java &amp; refactor" />
     <MESSAGE value="Flash messages introduce" />
-    <option name="LAST_COMMIT_MESSAGE" value="Flash messages introduce" />
+    <MESSAGE value="Flash messages issues fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flash messages issues fix" />
   </component>
 </project>

@@ -7,6 +7,11 @@
 @template.layout.page(
 page = page,
 content = @`
+    @if(page != null && page.getFlash() != null)
+        <div class="rounded-0 m-0 alert alert-success alert-${page.getFlashType()}" role="alert">
+            ${page.getFlash()}
+        </div>
+    @endif
        <div class="container-lg mt-5">
         <h1>Сайты</h1>
         <table class="table table-bordered table-hover mt-3">
@@ -26,7 +31,7 @@ content = @`
                         ${url.getId()}
                     </td>
                     <td>
-                        <a href="${NamedRoutes.urlPath(url.getId())}">${url.getName()}</a>
+                        <a href="${NamedRoutes.urlPath("{id}")}">${url.getName()}</a>
                     </td>
                     <td>
                         Test 1
