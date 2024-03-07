@@ -31,7 +31,7 @@ content = @`
                         ${url.getId()}
                     </td>
                     <td>
-                        <a href="${NamedRoutes.urlPath("{id}")}">${url.getName()}</a>
+                        <a href="${NamedRoutes.urlsPath()}/${url.getId()}">${url.getName()}</a>
                     </td>
                     <td>
                         Test 1

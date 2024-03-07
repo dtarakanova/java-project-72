@@ -34,9 +34,7 @@
 </div>
 </nav>
 <main class="flex-grow-1">
-    <section>
         ${content}
-    </section>
 </main>
 <footer class="footer border-top py-1 mt-4 bg-light">
     <p class="text-dark bg-muted text-center">by <a href="https://github.com/dtarakanova" class="text-info">Pelmen</a></p>

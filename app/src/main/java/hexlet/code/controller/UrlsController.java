@@ -22,7 +22,7 @@ public class UrlsController {
         URL parsedUrl;
         try {
             parsedUrl = new URI(inputUrl).toURL();
-        } catch (URISyntaxException | IllegalArgumentException | MalformedURLException e) {
+        } catch (URISyntaxException | IllegalArgumentException | NullPointerException | MalformedURLException e) {
             ctx.sessionAttribute("flash", "Некорректный URL");
             ctx.sessionAttribute("flashType", "error");
             ctx.redirect(NamedRoutes.mainPath());

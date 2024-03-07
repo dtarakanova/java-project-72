@@ -3,7 +3,7 @@ import hexlet.code.model.UrlsPage;
 import hexlet.code.util.NamedRoutes;
 public final class JteurlsindexGenerated {
 	public static final String JTE_NAME = "urls/urlsindex.jte";
-	public static final int[] JTE_LINE_INFO = {0,0,1,2,2,2,4,4,4,6,9,9,10,10,11,11,11,11,12,12,12,14,14,27,27,31,31,31,34,34,34,34,34,34,34,34,34,34,34,34,44,44,48,48,48,48,48,2,2,2,2};
+	public static final int[] JTE_LINE_INFO = {0,0,1,2,2,2,4,4,4,6,9,9,10,10,11,11,11,11,12,12,12,14,14,27,27,31,31,31,34,34,34,34,34,34,34,34,34,34,34,44,44,48,48,48,48,48,2,2,2,2};
 	public static void render(gg.jte.html.HtmlTemplateOutput jteOutput, gg.jte.html.HtmlInterceptor jteHtmlInterceptor, UrlsPage page) {
 		jteOutput.writeContent("\r\n");
 		var formatter = java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
@@ -26,16 +26,15 @@ public final class JteurlsindexGenerated {
 					jteOutput.writeContent("\r\n\r\n                <tr>\r\n                    <td>\r\n                        ");
 					jteOutput.setContext("td", null);
 					jteOutput.writeUserContent(url.getId());
-					jteOutput.writeContent("\r\n                    </td>\r\n                    <td>\r\n                        <a");
-					var __jte_html_attribute_0 = NamedRoutes.urlPath("{id}");
-					if (gg.jte.runtime.TemplateUtils.isAttributeRendered(__jte_html_attribute_0)) {
-						jteOutput.writeContent(" href=\"");
-						jteOutput.setContext("a", "href");
-						jteOutput.writeUserContent(__jte_html_attribute_0);
-						jteOutput.setContext("a", null);
-						jteOutput.writeContent("\"");
-					}
-					jteOutput.writeContent(">");
+					jteOutput.writeContent("\r\n                    </td>\r\n                    <td>\r\n                        <a href=\"");
+					jteOutput.setContext("a", "href");
+					jteOutput.writeUserContent(NamedRoutes.urlsPath());
+					jteOutput.setContext("a", null);
+					jteOutput.writeContent("/");
+					jteOutput.setContext("a", "href");
+					jteOutput.writeUserContent(url.getId());
+					jteOutput.setContext("a", null);
+					jteOutput.writeContent("\">");
 					jteOutput.setContext("a", null);
 					jteOutput.writeUserContent(url.getName());
 					jteOutput.writeContent("</a>\r\n                    </td>\r\n                    <td>\r\n                        Test 1\r\n                    </td>\r\n                    <td>\r\n                        Test 2\r\n                    </td>\r\n\r\n                </tr>\r\n            ");
