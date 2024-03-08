@@ -29,7 +29,7 @@ public class AppTest {
 
     @Test
     public void testUrlsPage() {
-        JavalinTest.test(app,((server, client) -> {
+        JavalinTest.test(app, ((server, client) -> {
             var response = client.get("/urls");
             assertThat(response.code()).isEqualTo(200);
         }));
@@ -37,11 +37,27 @@ public class AppTest {
 
     @Test
     public void testCreateUrl() {
-        JavalinTest.test(app,((server, client) -> {
+        JavalinTest.test(app, ((server, client) -> {
             var requestBody = "name=urlname";
             var response = client.post("/urls", requestBody);
             assertThat(response.code()).isEqualTo(200);
             assertThat(response.body().string().contains("urlname"));
+        }));
+    }
+
+    @Test
+    public void testUrlPageFound() {
+        JavalinTest.test(app, ((server, client) -> {
+            var response = client.get("/urls/1");
+            assertThat(response.code()).isEqualTo(200);
+        }));
+    }
+
+    @Test
+    public void testUrlNotFound() {
+        JavalinTest.test(app, ((server, client) -> {
+            var response = client.get("/urls/999999");
+            assertThat(response.code()).isEqualTo(404);
         }));
     }
 }
