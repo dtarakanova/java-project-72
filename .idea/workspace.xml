@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Flash messages issue fix">
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Url Page issue fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/Url.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/Url.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/layout/page.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/layout/page.jte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlsindex.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlsindex.jte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,24 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="app" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -245,13 +264,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00011" summary="build file update">
-      <created>1707135763357</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1707135763357</updated>
     </task>
     <task id="LOCAL-00012" summary="dockerfile update">
       <created>1707147350389</created>
@@ -589,7 +601,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709796698447</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Url Page issue fix">
+      <created>1709823459129</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1709823459131</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -605,7 +624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="build file update" />
     <MESSAGE value="dockerfile update" />
     <MESSAGE value="Gradle &amp; Java vesrions update" />
     <MESSAGE value="Build update" />
@@ -630,6 +648,7 @@
     <MESSAGE value="Flash messages introduce" />
     <MESSAGE value="Flash messages issues fix" />
     <MESSAGE value="Flash messages issue fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Flash messages issue fix" />
+    <MESSAGE value="Url Page issue fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Url Page issue fix" />
   </component>
 </project>
