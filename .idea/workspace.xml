@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Add Tests">
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" afterDir="false" />
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Tests issue fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +130,7 @@
       <recent name="\\wsl$\Ubuntu\home\pelmen\java-project-72\app\src\main\java\jte" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.app [checkstyleTest]">
+  <component name="RunManager" selected="Gradle.app [jacocoTestReport]">
     <configuration name="app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -243,11 +243,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.app [jacocoTestReport]" />
         <item itemvalue="Gradle.app [checkstyleTest]" />
         <item itemvalue="Gradle.app [checkstyleMain]" />
         <item itemvalue="Gradle.app [build]" />
         <item itemvalue="Gradle.app [compileTestJava]" />
-        <item itemvalue="Gradle.app [jacocoTestReport]" />
       </list>
     </recent_temporary>
   </component>
@@ -259,20 +259,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Gradle &amp; Java vesrions update">
-      <created>1707206332306</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1707206332306</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Build update">
-      <created>1707210265866</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1707210265882</updated>
     </task>
     <task id="LOCAL-00016" summary="Makefile update">
       <created>1707236305202</created>
@@ -603,7 +589,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709896665959</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Add Additional Tests">
+      <created>1709897039922</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1709897039922</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Tests issue fix">
+      <created>1709897235404</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1709897235404</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -619,8 +619,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Build update" />
-    <MESSAGE value="Makefile update" />
     <MESSAGE value="Gitignore update" />
     <MESSAGE value="Dockerfile update" />
     <MESSAGE value="README.md update" />
@@ -644,6 +642,8 @@
     <MESSAGE value="Url Page issue fix" />
     <MESSAGE value="Checkstyle errors fix" />
     <MESSAGE value="Add Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Tests" />
+    <MESSAGE value="Add Additional Tests" />
+    <MESSAGE value="Tests issue fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests issue fix" />
   </component>
 </project>

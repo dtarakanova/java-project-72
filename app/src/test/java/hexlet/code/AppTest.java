@@ -56,6 +56,17 @@ public class AppTest {
     */
 
     @Test
+    public void testUrlPageFound() {
+        JavalinTest.test(app, ((server, client) -> {
+            var requestBody = "name=urlname";
+            var upd = client.post("/urls", requestBody);
+            var response = client.get("/urls/1");
+            assertThat(response.code()).isEqualTo(200);
+            assertThat(response.body().string().contains("urlname"));
+        }));
+    }
+
+    @Test
     public void testUrlNotFound() {
         JavalinTest.test(app, ((server, client) -> {
             var response = client.get("/urls/999999");
