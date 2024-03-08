@@ -1,5 +1,8 @@
 package hexlet.code.util;
 
+import lombok.Generated;
+
+@Generated
 public class NamedRoutes {
     public static String mainPath() {
         return "/";
