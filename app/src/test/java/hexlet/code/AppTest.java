@@ -2,6 +2,8 @@ package hexlet.code;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import hexlet.code.model.Url;
+import hexlet.code.repository.DataRepository;
 import io.javalin.Javalin;
 import io.javalin.testtools.JavalinTest;
 import org.junit.jupiter.api.BeforeEach;
@@ -45,24 +47,14 @@ public class AppTest {
         }));
     }
 
-    /*
-    @Test
-    public void testUrlPageFound() {
-        JavalinTest.test(app, ((server, client) -> {
-            var response = client.get("/urls/1");
-            assertThat(response.code()).isEqualTo(200);
-        }));
-    }
-    */
 
     @Test
-    public void testUrlPageFound() {
+    public void testUrlPage() throws SQLException {
+        var url = new Url("urlname");
+        DataRepository.save(url);
         JavalinTest.test(app, ((server, client) -> {
-            var requestBody = "name=urlname";
-            var upd = client.post("/urls", requestBody);
-            var response = client.get("/urls/1");
+            var response = client.get("/urls/" + url.getId());
             assertThat(response.code()).isEqualTo(200);
-            assertThat(response.body().string().contains("urlname"));
         }));
     }
 
