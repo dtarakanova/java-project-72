@@ -33,6 +33,11 @@
 </div>
 </nav>
 <main class="flex-grow-1">
+    @if(page != null && page.getFlash() != null)
+        <div class="rounded-0 m-0 alert alert-success alert-${page.getFlashType()}" role="alert">
+            ${page.getFlash()}
+        </div>
+    @endif
         ${content}
 </main>
 <footer class="footer border-top py-1 mt-4 bg-light">

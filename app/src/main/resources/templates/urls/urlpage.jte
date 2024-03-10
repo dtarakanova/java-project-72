@@ -8,12 +8,7 @@
 @template.layout.page(
 page = page,
 content = @`
-    @if(page != null && page.getFlash() != null)
-        <div class="rounded-0 m-0 alert alert-success alert-${page.getFlashType()}" role="alert">
-            ${page.getFlash()}
-        </div>
-    @endif
-    <div class="container-lg mt-5">
+        <div class="container-lg mt-5">
         <h1>Сайт: ${page.getUrl().getName()}</h1>
 
         <table class="table table-bordered table-hover mt-3">

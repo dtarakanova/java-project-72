@@ -39,12 +39,12 @@ public class UrlsController {
 
         if (url != null) {
             ctx.sessionAttribute("flash", "Страница уже существует");
-            ctx.sessionAttribute("flashType", "warning");
+            ctx.sessionAttribute("flash-type", "warning");
         } else {
             Url newUrl = new Url(normalizedUrl);
             DataRepository.save(newUrl);
             ctx.sessionAttribute("flash", "Страница успешно добавлена");
-            ctx.sessionAttribute("flashType", "success");
+            ctx.sessionAttribute("flash-type", "success");
         }
         ctx.redirect(NamedRoutes.urlsPath());
     }
