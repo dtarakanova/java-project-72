@@ -1,11 +1,9 @@
 package hexlet.code.controller;
 import hexlet.code.model.Url;
-import hexlet.code.model.UrlPage;
 import hexlet.code.model.UrlsPage;
 import hexlet.code.repository.DataRepository;
 import hexlet.code.util.NamedRoutes;
 import io.javalin.http.Context;
-import io.javalin.http.NotFoundResponse;
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -59,13 +57,4 @@ public class UrlsController {
         ctx.render("urls/urlsindex.jte", Collections.singletonMap("page", page));
     }
 
-    public static void showUrlPage(Context ctx) throws SQLException {
-        long id = ctx.pathParamAsClass("id", Long.class).getOrDefault(null);
-        Url url = DataRepository.find(id)
-                .orElseThrow(() -> new NotFoundResponse("Url with id: " + id + " not found"));
-        UrlPage page = new UrlPage(url);
-        page.setFlash(ctx.consumeSessionAttribute("flash"));
-        page.setFlashType(ctx.consumeSessionAttribute("flash-type"));
-        ctx.render("urls/urlpage.jte", Collections.singletonMap("page", page));
-    }
 }

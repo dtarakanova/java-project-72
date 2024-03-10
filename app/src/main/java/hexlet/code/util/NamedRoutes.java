@@ -20,5 +20,13 @@ public class NamedRoutes {
         return "/urls/" + id;
     }
 
+    public static String urlChecks(Long id) {
+        return urlChecks(String.valueOf(id));
+    }
+
+    public static String urlChecks(String id) {
+        return "/urls/" + id + "/checks";
+    }
+
 
 }

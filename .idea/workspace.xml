@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Tests issue fix" />
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Add @Generated annotation">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlCheck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/UrlCheckRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/util/NamedRoutes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/util/NamedRoutes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlpage.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlpage.jte" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,6 +131,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
@@ -128,7 +142,7 @@
       <recent name="\\wsl$\Ubuntu\home\pelmen\java-project-72\app\src\main\java\jte" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.app [jacocoTestReport]">
+  <component name="RunManager" selected="Gradle.app [checkstyleMain]">
     <configuration name="app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -195,28 +209,6 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="app [compileTestJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="compileTestJava" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <configuration name="app [jacocoTestReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -239,13 +231,20 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="build.gradle.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="app.test" />
+      <option name="filePath" value="$PROJECT_DIR$/app/build.gradle.kts" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.app [checkstyleMain]" />
+        <item itemvalue="Kotlin script (Beta).build.gradle.kts" />
         <item itemvalue="Gradle.app [jacocoTestReport]" />
         <item itemvalue="Gradle.app [checkstyleTest]" />
-        <item itemvalue="Gradle.app [checkstyleMain]" />
         <item itemvalue="Gradle.app [build]" />
-        <item itemvalue="Gradle.app [compileTestJava]" />
       </list>
     </recent_temporary>
   </component>
@@ -257,13 +256,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Gitignore update">
-      <created>1707319216606</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1707319216606</updated>
     </task>
     <task id="LOCAL-00019" summary="Dockerfile update">
       <created>1707378475552</created>
@@ -601,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709909138344</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Add @Generated annotation">
+      <created>1709909490765</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1709909490765</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -617,7 +616,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Gitignore update" />
     <MESSAGE value="Dockerfile update" />
     <MESSAGE value="README.md update" />
     <MESSAGE value="DB connection establish" />
@@ -642,6 +640,7 @@
     <MESSAGE value="Add Tests" />
     <MESSAGE value="Add Additional Tests" />
     <MESSAGE value="Tests issue fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests issue fix" />
+    <MESSAGE value="Add @Generated annotation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add @Generated annotation" />
   </component>
 </project>

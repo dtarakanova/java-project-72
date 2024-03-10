@@ -1,6 +1,7 @@
 package hexlet.code.repository;
 
 import hexlet.code.model.Url;
+import hexlet.code.model.UrlCheck;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -24,7 +25,7 @@ public class DataRepository extends BaseRepository {
             if (generatedKeys.next()) {
                 url.setId(generatedKeys.getLong(1));
             } else {
-                throw new SQLException("DB have not returned an id after saving");
+                throw new SQLException("Ошибка при сохранении");
             }
         }
     }
@@ -82,6 +83,50 @@ public class DataRepository extends BaseRepository {
                 return Optional.of(url);
             }
             return Optional.empty();
+        }
+    }
+
+    public static Optional<Url> findById(Long id) throws SQLException {
+        String sql = "SELECT * FROM urls WHERE id = ?";
+        try (Connection conn = dataSource.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setLong(1, id);
+            ResultSet resultSet = stmt.executeQuery();
+            if (resultSet.next()) {
+                String name = resultSet.getString("name");
+                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                long urlId = resultSet.getLong("id");
+                Url url = new Url(name);
+                url.setId(urlId);
+                url.setCreatedAt(createdAt);
+                return Optional.of(url);
+            }
+            return Optional.empty();
+        }
+    }
+
+    public static List<UrlCheck> findByUrlId(Long urlId) throws SQLException {
+        String sql = "SELECT * FROM url_checks WHERE url_id = ? ORDER BY id";
+        try (Connection conn = dataSource.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setLong(1, urlId);
+            ResultSet resultSet = stmt.executeQuery();
+            ArrayList<UrlCheck> result = new ArrayList<>();
+
+            while (resultSet.next()) {
+                long id = resultSet.getLong("id");
+                int statusCode = resultSet.getInt("status_code");
+                String title = resultSet.getString("title");
+                String h1 = resultSet.getString("h1");
+                String description = resultSet.getString("description");
+                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                UrlCheck urlCheck = new UrlCheck(statusCode, createdAt);
+                //urlCheck.setId(id);
+                //urlCheck.setUrlId(urlId);
+                //urlCheck.setCreatedAt(createdAt);
+                result.add(urlCheck);
+            }
+            return result;
         }
     }
 }
