@@ -9,6 +9,7 @@ import hexlet.code.util.NamedRoutes;
 import io.javalin.http.Context;
 import io.javalin.http.NotFoundResponse;
 
+import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
 import java.sql.SQLException;
 import java.sql.Timestamp;
@@ -34,17 +35,15 @@ public class UrlPageController {
                 .orElseThrow(() -> new NotFoundResponse("Url with id: " + id + " not found"));
 
         try {
-            var response = Unirest.get(url.getName()).asString();
+            HttpResponse<String> response = Unirest.get(url.getName()).asString();
             int statusCode = response.getStatus();
-            var createdAt = new Timestamp(System.currentTimeMillis());
-            UrlCheck newCheck = new UrlCheck(statusCode, createdAt);
+            UrlCheck newCheck = new UrlCheck(statusCode);
             newCheck.setUrlId(id);
             UrlCheckRepository.saveUrlCheck(newCheck);
             ctx.sessionAttribute("flash", "Страница успешно проверена");
             ctx.sessionAttribute("flash-type", "success");
-            ctx.redirect(NamedRoutes.urlPath(id));
         } catch (Exception e) {
-            ctx.sessionAttribute("flash", "Ошибка при проверке");
+            ctx.sessionAttribute("flash", e.getMessage());
             ctx.sessionAttribute("flash-type", "danger");
         }
         ctx.redirect(NamedRoutes.urlPath(id));

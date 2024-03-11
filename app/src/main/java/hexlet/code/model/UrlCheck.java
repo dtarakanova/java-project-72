@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.sql.Time;
 import java.sql.Timestamp;
 
 @Getter
@@ -20,10 +21,8 @@ public class UrlCheck {
     private Timestamp createdAt;
 
 
-    public UrlCheck(int statusCode, Timestamp createdAt) {
-
+    public UrlCheck(int statusCode) {
         this.statusCode = statusCode;
-        this.createdAt = createdAt;
     }
 
     public UrlCheck(int statusCode, String title, String h1, String description, Timestamp createdAt) {

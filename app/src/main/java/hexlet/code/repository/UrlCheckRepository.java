@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 
 public class UrlCheckRepository extends BaseRepository {
     public static void saveUrlCheck(UrlCheck newCheck) throws SQLException {
-        String sql = "INSERT INTO url_checks(status_code, created_at) VALUES(?,?)";
+        String sql = "INSERT INTO url_checks(url_id, status_code, created_at) VALUES(?, ?, ?)";
         Timestamp dateandtime = new Timestamp(System.currentTimeMillis());
         try (var conn = dataSource.getConnection();
              var preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {

@@ -32,7 +32,6 @@ content = @`
                     <td>
                         Test 2
                     </td>
-
                 </tr>
             @endfor
             </tbody>
