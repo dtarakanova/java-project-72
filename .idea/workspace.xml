@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Urlpage check filling">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlpageGenerated$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlpageGenerated.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlpageGenerated.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/UrlCheckRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/UrlCheckRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlsindex.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlsindex.jte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,13 +245,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Dockerfile update">
-      <created>1707379701098</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1707379701098</updated>
     </task>
     <task id="LOCAL-00022" summary="README.md update">
       <created>1707380423509</created>
@@ -600,7 +582,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710076554015</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Urlpage check filling">
+      <created>1710139759780</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1710139759780</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

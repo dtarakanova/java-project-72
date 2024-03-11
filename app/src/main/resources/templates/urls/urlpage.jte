@@ -49,7 +49,7 @@ content = @`
 
                 <tr>
                     <td>
-                        ${check.getId()}
+                        ${check.getUrlId()}
                     </td>
                     <td>
                         ${check.getStatusCode()}
