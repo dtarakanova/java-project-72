@@ -36,8 +36,10 @@ public class UrlPageController {
 
         try {
             HttpResponse<String> response = Unirest.get(url.getName()).asString();
+            Long urlId = url.getId();
             int statusCode = response.getStatus();
-            UrlCheck newCheck = new UrlCheck(statusCode);
+            Timestamp createdAt = new Timestamp(System.currentTimeMillis());
+            UrlCheck newCheck = new UrlCheck(urlId, statusCode, createdAt);
             newCheck.setUrlId(id);
             UrlCheckRepository.saveUrlCheck(newCheck);
             ctx.sessionAttribute("flash", "Страница успешно проверена");

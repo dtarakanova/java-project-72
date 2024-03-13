@@ -36,7 +36,7 @@ public final class JteurlpageGenerated {
 				for (var check : page.getCheck()) {
 					jteOutput.writeContent("\r\n\r\n                <tr>\r\n                    <td>\r\n                        ");
 					jteOutput.setContext("td", null);
-					jteOutput.writeUserContent(check.getId());
+					jteOutput.writeUserContent(check.getUrlId());
 					jteOutput.writeContent("\r\n                    </td>\r\n                    <td>\r\n                        ");
 					jteOutput.setContext("td", null);
 					jteOutput.writeUserContent(check.getStatusCode());

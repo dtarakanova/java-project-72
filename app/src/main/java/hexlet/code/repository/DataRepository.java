@@ -119,8 +119,8 @@ public class DataRepository extends BaseRepository {
                 //String title = resultSet.getString("title");
                 //String h1 = resultSet.getString("h1");
                 //String description = resultSet.getString("description");
-                //Timestamp createdAt = resultSet.getTimestamp("created_at");
-                UrlCheck urlCheck = new UrlCheck(statusCode);
+                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                UrlCheck urlCheck = new UrlCheck(urlId, statusCode, createdAt);
                 //urlCheck.setId(id);
                 //urlCheck.setUrlId(urlId);
                 //urlCheck.setCreatedAt(createdAt);
