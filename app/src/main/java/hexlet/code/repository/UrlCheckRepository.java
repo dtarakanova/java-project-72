@@ -2,9 +2,16 @@ package hexlet.code.repository;
 
 import hexlet.code.model.UrlCheck;
 
-import java.sql.SQLException;
+import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.Timestamp;
+import java.sql.SQLException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class UrlCheckRepository extends BaseRepository {
     public static void saveUrlCheck(UrlCheck newCheck) throws SQLException {
@@ -25,6 +32,30 @@ public class UrlCheckRepository extends BaseRepository {
                 throw new SQLException("Ошибка при сохранении");
             }
 
+        }
+    }
+
+    public static Map<Long, UrlCheck> findLatestChecks() throws SQLException {
+        String sql = "SELECT DISTINCT ON (url_id) * from url_checks order by url_id DESC, id DESC";
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            ResultSet resultSet = preparedStatement.executeQuery();
+            var result = new HashMap<Long, UrlCheck>();
+            while (resultSet.next()) {
+                long id = resultSet.getLong("id");
+                long urlId = resultSet.getLong("url_id");
+                int statusCode = resultSet.getInt("status_code");
+                //String title = resultSet.getString("title");
+                //String h1 = resultSet.getString("h1");
+                //String description = resultSet.getString("description");
+                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                UrlCheck urlCheck = new UrlCheck(urlId, statusCode, createdAt);
+                //urlCheck.setId(id);
+                //urlCheck.setUrlId(urlId);
+                //urlCheck.setCreatedAt(createdAt);
+                result.put(urlId, urlCheck);
+            }
+            return result;
         }
     }
 }

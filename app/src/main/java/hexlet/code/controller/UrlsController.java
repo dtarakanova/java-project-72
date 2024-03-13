@@ -1,7 +1,9 @@
 package hexlet.code.controller;
 import hexlet.code.model.Url;
+import hexlet.code.model.UrlCheck;
 import hexlet.code.model.UrlsPage;
 import hexlet.code.repository.DataRepository;
+import hexlet.code.repository.UrlCheckRepository;
 import hexlet.code.util.NamedRoutes;
 import io.javalin.http.Context;
 
@@ -12,6 +14,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 
 public class UrlsController {
@@ -51,7 +54,8 @@ public class UrlsController {
 
     public static void showUrls(Context ctx) throws SQLException {
         List<Url> urls = DataRepository.getEntities();
-        UrlsPage page = new UrlsPage(urls);
+        Map<Long, UrlCheck> latestChecks = UrlCheckRepository.findLatestChecks();
+        UrlsPage page = new UrlsPage(urls, latestChecks);
         page.setFlash(ctx.consumeSessionAttribute("flash"));
         page.setFlashType(ctx.consumeSessionAttribute("flash-type"));
         ctx.render("urls/urlsindex.jte", Collections.singletonMap("page", page));
