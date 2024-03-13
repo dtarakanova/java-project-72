@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Urlpage check issue fix">
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Urlpages latest checks publish">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/UrlCheckRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/UrlCheckRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlsindex.jte" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/templates/urls/urlsindex.jte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,13 +245,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Fix table issue">
-      <created>1708586425392</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1708586425392</updated>
     </task>
     <task id="LOCAL-00025" summary="Fix table issue">
       <created>1708586748246</created>
@@ -597,7 +582,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710342327551</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Urlpages latest checks publish">
+      <created>1710345233425</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1710345233425</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -613,7 +605,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="JTE setup" />
     <MESSAGE value="Add main page template" />
     <MESSAGE value="Add and configure form for url input" />
     <MESSAGE value="Fix checkstyle error" />
@@ -638,6 +629,7 @@
     <MESSAGE value="Fix bootstrap issue with color of alerts" />
     <MESSAGE value="Urlpage check filling" />
     <MESSAGE value="Urlpage check issue fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Urlpage check issue fix" />
+    <MESSAGE value="Urlpages latest checks publish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Urlpages latest checks publish" />
   </component>
 </project>
