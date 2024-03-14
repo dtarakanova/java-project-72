@@ -129,4 +129,29 @@ public class DataRepository extends BaseRepository {
             return result;
         }
     }
+
+    public static Optional<Url> findByName(String name) throws SQLException {
+        String sql = "SELECT * FROM urls WHERE name=?";
+
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setString(1, name);
+            ResultSet resultSet = statement.executeQuery();
+            Url existingUrl = null;
+
+            if (resultSet.next()) {
+                long id = resultSet.getLong("id");
+                Timestamp createdAt = resultSet.getTimestamp("created_at");
+
+                existingUrl = new Url(name);
+
+                existingUrl.setId(id);
+                existingUrl.setCreatedAt(createdAt);
+            }
+
+            return Optional.ofNullable(existingUrl);
+        }
+    }
+
 }

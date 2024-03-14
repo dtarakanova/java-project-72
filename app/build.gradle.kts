@@ -27,6 +27,7 @@ dependencies {
     testImplementation("org.assertj:assertj-core:3.24.2")
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
     implementation("org.slf4j:slf4j-simple:2.0.9")
     implementation("org.webjars:bootstrap:5.2.3")
     implementation("io.javalin:javalin:5.6.2")

@@ -4,8 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Urlpages latest checks publish">
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="DROP TABLE issue fix">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/util/ResourceFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/samplepage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/JteindexGenerated$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/JteindexGenerated.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/JteindexGenerated.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/layout/JtepageGenerated.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlpageGenerated$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlpageGenerated.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlpageGenerated.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +147,7 @@
       <recent name="\\wsl$\Ubuntu\home\pelmen\java-project-72\app\src\main\java\jte" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.app [checkstyleMain]">
+  <component name="RunManager" selected="Gradle.app [checkstyleTest]">
     <configuration name="app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -229,10 +245,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.app [checkstyleTest]" />
         <item itemvalue="Gradle.app [checkstyleMain]" />
         <item itemvalue="Kotlin script (Beta).build.gradle.kts" />
         <item itemvalue="Gradle.app [jacocoTestReport]" />
-        <item itemvalue="Gradle.app [checkstyleTest]" />
         <item itemvalue="Gradle.app [build]" />
       </list>
     </recent_temporary>
@@ -245,13 +261,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Fix table issue">
-      <created>1708586748246</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1708586748246</updated>
     </task>
     <task id="LOCAL-00026" summary="Fix table issue">
       <created>1708587075657</created>
@@ -589,7 +598,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710345233425</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="DROP TABLE issue fix">
+      <created>1710346799110</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1710346799110</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -605,7 +621,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add main page template" />
     <MESSAGE value="Add and configure form for url input" />
     <MESSAGE value="Fix checkstyle error" />
     <MESSAGE value="Save url to database" />
@@ -630,6 +645,7 @@
     <MESSAGE value="Urlpage check filling" />
     <MESSAGE value="Urlpage check issue fix" />
     <MESSAGE value="Urlpages latest checks publish" />
-    <option name="LAST_COMMIT_MESSAGE" value="Urlpages latest checks publish" />
+    <MESSAGE value="DROP TABLE issue fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="DROP TABLE issue fix" />
   </component>
 </project>
