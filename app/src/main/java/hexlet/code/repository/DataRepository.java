@@ -130,6 +130,7 @@ public class DataRepository extends BaseRepository {
         }
     }
 
+
     public static Optional<Url> findByName(String name) throws SQLException {
         String sql = "SELECT * FROM urls WHERE name=?";
 

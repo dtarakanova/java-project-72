@@ -4,51 +4,58 @@ import static hexlet.code.util.ResourceFile.readResourceFile;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import hexlet.code.model.Url;
-import hexlet.code.model.UrlCheck;
 import hexlet.code.repository.DataRepository;
+import hexlet.code.repository.UrlCheckRepository;
 import hexlet.code.util.NamedRoutes;
 import io.javalin.Javalin;
 import io.javalin.testtools.JavalinTest;
-import kong.unirest.HttpStatus;
-import kong.unirest.Unirest;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
 import java.io.IOException;
 
 import java.sql.SQLException;
-import java.util.List;
-import java.util.Optional;
 
-public class AppTest {
+
+public final class AppTest {
 
     static Javalin app;
     private static MockWebServer mockServer;
-    private static final int PORT = 0;
     private static String basicUrl;
 
-    @BeforeAll
-    public static void startServer() throws IOException, SQLException {
-        app = App.getApp();
-        app.start(PORT);
 
-        basicUrl = "http://localhost:" + app.port();
+
+    @BeforeAll
+    public static void startMockServer() throws IOException {
         mockServer = new MockWebServer();
-        String testBody = readResourceFile("fixtures/samplepage.html");
-        MockResponse mockResponse = new MockResponse().setBody(testBody);
-        mockServer.enqueue(mockResponse);
         mockServer.start();
+        basicUrl = mockServer.url("/").toString();
+        var mockResponse = new MockResponse().setBody(readResourceFile());
+        mockServer.enqueue(mockResponse);
+    }
+
+    @BeforeEach
+    public void startServer() throws SQLException, IOException {
+        app = App.getApp();
     }
 
 
     @AfterAll
-    public static void stopServer() throws IOException {
-        app.stop();
+    public static void stopMockServer() throws IOException {
         mockServer.shutdown();
+    }
+
+
+
+    @AfterEach
+    public void stopServer() {
+        app.stop();
     }
 
 
@@ -99,25 +106,16 @@ public class AppTest {
 
     @Test
     public void testCheck() throws SQLException {
-        String url = mockServer.url("/").toString().replaceAll("/$", "");
-        Unirest.post(basicUrl + NamedRoutes.urlsPath()).field("url", url).asEmpty();
+        var url = new Url(basicUrl);
+        DataRepository.save(url);
+        JavalinTest.test(app, ((server, client) -> {
+            var response = client.post(NamedRoutes.urlChecks(url.getId()));
+            assertThat(response.code()).isEqualTo(200);
+        }));
 
-        Optional<Url> currentUrl = DataRepository.findByName(url);
+        var urlCheck = UrlCheckRepository.latestChecksById(url.getId()).get();
+        var statusCode = urlCheck.getStatusCode();
+        assertThat(statusCode).isEqualTo(200);
 
-        assertThat(currentUrl.isEmpty()).isFalse();
-        assertThat(currentUrl.get().getName()).isEqualTo(url);
-
-        Url actualUrl = currentUrl.get();
-        Unirest.post(basicUrl + NamedRoutes.urlChecks(actualUrl.getId())).asEmpty();
-
-        List<UrlCheck> actualChecks = DataRepository.findByUrlId(actualUrl.getId());
-        assertThat(actualChecks.isEmpty()).isFalse();
-
-        UrlCheck actualCheck = actualChecks.get(0);
-
-        assertThat(actualCheck.getStatusCode()).isEqualTo(HttpStatus.OK);
-        //assertThat(actualCheck.getTitle()).isEqualTo("Test title");
-        //assertThat(actualCheck.getH1()).isEqualTo("test h1");
-        //assertThat(actualCheck.getDescription()).isEqualTo("test description");
     }
 }

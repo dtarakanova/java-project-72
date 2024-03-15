@@ -1,22 +1,21 @@
 package hexlet.code.util;
 
-import hexlet.code.App;
-
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.util.Objects;
-import java.util.stream.Collectors;
+import java.util.StringJoiner;
+
 
 public class ResourceFile {
-    public static String readResourceFile(String fileName) throws IOException {
-        InputStream inputStream = Objects.requireNonNull(App.class.getClassLoader().getResourceAsStream(fileName));
-        InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+    public static String readResourceFile() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader("src/test/resources/fixtures/samplepage.html"));
+        String lineOfFile = reader.readLine();
+        var result = new StringJoiner("\n");
 
-        try (BufferedReader reader = new BufferedReader(streamReader)) {
-            return reader.lines().collect(Collectors.joining("\n"));
+        while (lineOfFile != null) {
+            result.add(lineOfFile);
+            lineOfFile = reader.readLine();
         }
+        return result.toString();
     }
 }

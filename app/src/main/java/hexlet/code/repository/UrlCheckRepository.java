@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class UrlCheckRepository extends BaseRepository {
     public static void saveUrlCheck(UrlCheck newCheck) throws SQLException {
@@ -56,6 +57,29 @@ public class UrlCheckRepository extends BaseRepository {
                 result.put(urlId, urlCheck);
             }
             return result;
+        }
+    }
+
+    public static Optional<UrlCheck> latestChecksById(Long id) throws SQLException {
+        String sql = "SELECT * FROM url_checks WHERE url_id = ? ORDER BY created_at DESC LIMIT 1";
+        try (var conn = dataSource.getConnection();
+             var stmt = conn.prepareStatement(sql)) {
+            stmt.setLong(1, id);
+            var resultSet = stmt.executeQuery();
+            while (resultSet.next()) {
+                Long idN = resultSet.getLong("id");
+                Long urlId = resultSet.getLong("url_id");
+                int statusCode = resultSet.getInt("status_code");
+                //String h1 = resultSet.getString("h1");
+                //String title = resultSet.getString("title");
+                //String description = resultSet.getString("description");
+                Timestamp createdAt = resultSet.getTimestamp("created_at");
+
+                UrlCheck newUrlCheck = new UrlCheck(urlId, statusCode, createdAt);
+                newUrlCheck.setId(idN);
+                return Optional.of(newUrlCheck);
+            }
+            return Optional.empty();
         }
     }
 }
