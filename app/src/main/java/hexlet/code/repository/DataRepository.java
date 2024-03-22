@@ -114,45 +114,15 @@ public class DataRepository extends BaseRepository {
             ArrayList<UrlCheck> result = new ArrayList<>();
 
             while (resultSet.next()) {
-                long id = resultSet.getLong("id");
                 int statusCode = resultSet.getInt("status_code");
-                //String title = resultSet.getString("title");
-                //String h1 = resultSet.getString("h1");
-                //String description = resultSet.getString("description");
+                String title = resultSet.getString("title");
+                String h1 = resultSet.getString("h1");
+                String description = resultSet.getString("description");
                 Timestamp createdAt = resultSet.getTimestamp("created_at");
-                UrlCheck urlCheck = new UrlCheck(urlId, statusCode, createdAt);
-                //urlCheck.setId(id);
-                //urlCheck.setUrlId(urlId);
-                //urlCheck.setCreatedAt(createdAt);
+                UrlCheck urlCheck = new UrlCheck(urlId, statusCode, title, h1, description, createdAt);
                 result.add(urlCheck);
             }
             return result;
         }
     }
-
-
-    public static Optional<Url> findByName(String name) throws SQLException {
-        String sql = "SELECT * FROM urls WHERE name=?";
-
-        try (Connection connection = dataSource.getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql)) {
-
-            statement.setString(1, name);
-            ResultSet resultSet = statement.executeQuery();
-            Url existingUrl = null;
-
-            if (resultSet.next()) {
-                long id = resultSet.getLong("id");
-                Timestamp createdAt = resultSet.getTimestamp("created_at");
-
-                existingUrl = new Url(name);
-
-                existingUrl.setId(id);
-                existingUrl.setCreatedAt(createdAt);
-            }
-
-            return Optional.ofNullable(existingUrl);
-        }
-    }
-
 }

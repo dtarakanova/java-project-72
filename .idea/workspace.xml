@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Add checks test">
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Fix issues in checks test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlpageGenerated$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlpageGenerated.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlpageGenerated.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/controller/UrlPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/Url.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/Url.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/UrlCheckRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/UrlCheckRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/util/ResourceFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/util/ResourceFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +138,7 @@
       <recent name="\\wsl$\Ubuntu\home\pelmen\java-project-72\app\src\main\java\jte" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.app [checkstyleTest]">
+  <component name="RunManager" selected="Gradle.app [checkstyleMain]">
     <configuration name="app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -239,8 +236,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.app [checkstyleTest]" />
         <item itemvalue="Gradle.app [checkstyleMain]" />
+        <item itemvalue="Gradle.app [checkstyleTest]" />
         <item itemvalue="Kotlin script (Beta).build.gradle.kts" />
         <item itemvalue="Gradle.app [jacocoTestReport]" />
         <item itemvalue="Gradle.app [build]" />
@@ -255,13 +252,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Fix table issue">
-      <created>1708587424651</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1708587424651</updated>
     </task>
     <task id="LOCAL-00028" summary="JTE setup">
       <created>1708668609439</created>
@@ -599,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1710408630047</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Fix issues in checks test">
+      <created>1710487029544</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1710487029544</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -615,7 +612,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fix checkstyle error" />
     <MESSAGE value="Save url to database" />
     <MESSAGE value="Fix checkstyle issue" />
     <MESSAGE value="Fix DB issue" />
@@ -640,6 +636,7 @@
     <MESSAGE value="Urlpages latest checks publish" />
     <MESSAGE value="DROP TABLE issue fix" />
     <MESSAGE value="Add checks test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add checks test" />
+    <MESSAGE value="Fix issues in checks test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix issues in checks test" />
   </component>
 </project>

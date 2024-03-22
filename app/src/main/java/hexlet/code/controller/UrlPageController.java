@@ -11,6 +11,10 @@ import io.javalin.http.NotFoundResponse;
 
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Collections;
@@ -36,10 +40,16 @@ public class UrlPageController {
 
         try {
             HttpResponse<String> response = Unirest.get(url.getName()).asString();
+            Document doc = Jsoup.parse(response.getBody());
             Long urlId = url.getId();
             int statusCode = response.getStatus();
             Timestamp createdAt = new Timestamp(System.currentTimeMillis());
-            UrlCheck newCheck = new UrlCheck(urlId, statusCode, createdAt);
+            String title = doc.title();
+            Element h1El = doc.selectFirst("h1");
+            String h1 = h1El == null ? "" : h1El.text();
+            Element descr = doc.selectFirst("meta[name=description]");
+            String description = descr == null ? "" : descr.attr("content");
+            UrlCheck newCheck = new UrlCheck(urlId, statusCode, title, h1, description, createdAt);
             newCheck.setUrlId(id);
             UrlCheckRepository.saveUrlCheck(newCheck);
             ctx.sessionAttribute("flash", "Страница успешно проверена");

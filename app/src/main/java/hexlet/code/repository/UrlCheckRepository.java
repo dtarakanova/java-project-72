@@ -9,21 +9,23 @@ import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
 public class UrlCheckRepository extends BaseRepository {
     public static void saveUrlCheck(UrlCheck newCheck) throws SQLException {
-        String sql = "INSERT INTO url_checks(url_id, status_code, created_at)"
-                + "VALUES (?, ?, ?)";
+        String sql = "INSERT INTO url_checks(url_id, status_code, title, h1, description, created_at)"
+                + "VALUES (?, ?, ?, ?, ?, ?)";
         Timestamp dateandtime = new Timestamp(System.currentTimeMillis());
         try (var conn = dataSource.getConnection();
              var preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             preparedStatement.setLong(1, newCheck.getUrlId());
             preparedStatement.setInt(2, newCheck.getStatusCode());
-            preparedStatement.setTimestamp(3, dateandtime);
+            preparedStatement.setString(3, newCheck.getTitle());
+            preparedStatement.setString(4, newCheck.getH1());
+            preparedStatement.setString(5, newCheck.getDescription());
+            preparedStatement.setTimestamp(6, dateandtime);
             preparedStatement.executeUpdate();
             var generatedKeys = preparedStatement.getGeneratedKeys();
             if (generatedKeys.next()) {
@@ -43,17 +45,13 @@ public class UrlCheckRepository extends BaseRepository {
             ResultSet resultSet = preparedStatement.executeQuery();
             var result = new HashMap<Long, UrlCheck>();
             while (resultSet.next()) {
-                long id = resultSet.getLong("id");
                 long urlId = resultSet.getLong("url_id");
                 int statusCode = resultSet.getInt("status_code");
-                //String title = resultSet.getString("title");
-                //String h1 = resultSet.getString("h1");
-                //String description = resultSet.getString("description");
+                String title = resultSet.getString("title");
+                String h1 = resultSet.getString("h1");
+                String description = resultSet.getString("description");
                 Timestamp createdAt = resultSet.getTimestamp("created_at");
-                UrlCheck urlCheck = new UrlCheck(urlId, statusCode, createdAt);
-                //urlCheck.setId(id);
-                //urlCheck.setUrlId(urlId);
-                //urlCheck.setCreatedAt(createdAt);
+                UrlCheck urlCheck = new UrlCheck(urlId, statusCode, title, h1, description, createdAt);
                 result.put(urlId, urlCheck);
             }
             return result;
@@ -70,12 +68,12 @@ public class UrlCheckRepository extends BaseRepository {
                 Long idN = resultSet.getLong("id");
                 Long urlId = resultSet.getLong("url_id");
                 int statusCode = resultSet.getInt("status_code");
-                //String h1 = resultSet.getString("h1");
-                //String title = resultSet.getString("title");
-                //String description = resultSet.getString("description");
+                String title = resultSet.getString("title");
+                String h1 = resultSet.getString("h1");
+                String description = resultSet.getString("description");
                 Timestamp createdAt = resultSet.getTimestamp("created_at");
 
-                UrlCheck newUrlCheck = new UrlCheck(urlId, statusCode, createdAt);
+                UrlCheck newUrlCheck = new UrlCheck(urlId, statusCode, title, h1, description, createdAt);
                 newUrlCheck.setId(idN);
                 return Optional.of(newUrlCheck);
             }
