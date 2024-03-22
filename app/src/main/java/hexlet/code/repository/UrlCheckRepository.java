@@ -11,7 +11,6 @@ import java.sql.ResultSet;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 public class UrlCheckRepository extends BaseRepository {
     public static void saveUrlCheck(UrlCheck newCheck) throws SQLException {
