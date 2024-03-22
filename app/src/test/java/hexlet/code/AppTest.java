@@ -25,12 +25,12 @@ import java.sql.SQLException;
 
 public final class AppTest {
 
-    static Javalin app;
+    private static Javalin app;
     private static MockWebServer mockServer;
 
 
     @BeforeEach
-    public void startServer() throws SQLException, IOException {
+    void startServer() throws SQLException, IOException {
         app = App.getApp();
     }
 
@@ -105,22 +105,27 @@ public final class AppTest {
     }
 
     @Test
-    public void testCheck() throws SQLException, NullPointerException {
-        var url = mockServer.url("/").toString().replaceAll("/$", "");
+    public void testCheck() throws SQLException {
+        String url = mockServer.url("/").toString().replaceAll("/$", "");
         JavalinTest.test(app, ((server, client) -> {
             var requestBody = "url=" + url;
             assertThat(client.post("/urls", requestBody).code()).isEqualTo(200);
-        }));
 
-        var actualUrl = DataRepository.findByName(url).orElse(null);
-        var urlCheck = UrlCheckRepository.findLatestChecks().get(actualUrl.getId());
-        var statusCode = urlCheck.getStatusCode();
-        var title = urlCheck.getTitle();
-        var h1 = urlCheck.getH1();
-        var description = urlCheck.getDescription();
-        assertThat(statusCode).isEqualTo(200);
-        assertThat(title).isEqualTo("Hello, world");
-        assertThat(h1).isEqualTo("Hello, new world");
-        assertThat(description).isEqualTo("Test description");
+            var actualUrl = DataRepository.findByName(url).orElse(null);
+            client.post("/urls/" + actualUrl.getId() + "/checks");
+            var responce = client.get("/urls/" + actualUrl.getId());
+            assertThat(responce.code()).isEqualTo(200);
+            assert responce.body() != null;
+            assertThat(responce.body().string()).contains(url);
+            var urlCheck = UrlCheckRepository.findLatestChecks().get(actualUrl.getId());
+            var statusCode = urlCheck.getStatusCode();
+            var title = urlCheck.getTitle();
+            var h1 = urlCheck.getH1();
+            var description = urlCheck.getDescription();
+            assertThat(statusCode).isEqualTo(200);
+            assertThat(title).isEqualTo("Hello, world");
+            assertThat(h1).isEqualTo("Hello, new world");
+            assertThat(description).isEqualTo("Test description");
+        }));
     }
 }

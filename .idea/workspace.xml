@@ -12,10 +12,8 @@
       <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/model/UrlCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/repository/DataRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/util/ResourceFile.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/fixtures/samplepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/samplepage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,13 +253,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Add and configure form for url input">
-      <created>1708685963720</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1708685963720</updated>
     </task>
     <task id="LOCAL-00032" summary="Add and configure form for url input">
       <created>1708686033313</created>
@@ -599,7 +590,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711093051410</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Test update">
+      <created>1711095706388</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1711095706388</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
