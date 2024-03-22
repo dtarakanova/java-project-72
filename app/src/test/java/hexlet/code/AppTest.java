@@ -115,7 +115,12 @@ public final class AppTest {
 
         var urlCheck = UrlCheckRepository.latestChecksById(url.getId()).get();
         var statusCode = urlCheck.getStatusCode();
+        var title = urlCheck.getTitle();
+        var h1 = urlCheck.getH1();
+        var description = urlCheck.getDescription();
         assertThat(statusCode).isEqualTo(200);
-
+        assertThat(title).isEqualTo("Hello, world");
+        assertThat(h1).isEqualTo("Hello, new world");
+        assertThat(description).isEqualTo("Test description");
     }
 }
