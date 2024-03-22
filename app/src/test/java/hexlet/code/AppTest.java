@@ -55,12 +55,6 @@ public final class AppTest {
         mockServer.shutdown();
     }
 
-    @AfterEach
-    public static void stopServer() throws IOException {
-        app.stop();
-    }
-
-
     @Test
     public void testMainPage() {
         JavalinTest.test(app, ((server, client) -> {
