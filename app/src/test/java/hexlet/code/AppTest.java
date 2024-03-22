@@ -1,18 +1,15 @@
 package hexlet.code;
 
-import static hexlet.code.util.ResourceFile.readResourceFile;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import hexlet.code.model.Url;
 import hexlet.code.repository.DataRepository;
 import hexlet.code.repository.UrlCheckRepository;
-import hexlet.code.util.NamedRoutes;
 import io.javalin.Javalin;
 import io.javalin.testtools.JavalinTest;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,6 +17,9 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.SQLException;
 
 
@@ -27,34 +27,35 @@ public final class AppTest {
 
     static Javalin app;
     private static MockWebServer mockServer;
-    private static String basicUrl;
 
-
-
-    @BeforeAll
-    public static void startMockServer() throws IOException {
-        mockServer = new MockWebServer();
-        mockServer.start();
-        basicUrl = mockServer.url("/").toString();
-        var mockResponse = new MockResponse().setBody(readResourceFile());
-        mockServer.enqueue(mockResponse);
-    }
 
     @BeforeEach
     public void startServer() throws SQLException, IOException {
         app = App.getApp();
     }
 
+    private static Path getFixturePath() {
+        return Paths.get("src", "test", "resources", "fixtures", "samplepage.html")
+                .toAbsolutePath().normalize();
+    }
+
+    private static String readFixture() throws IOException {
+        Path filePath = getFixturePath();
+        return Files.readString(filePath).trim();
+    }
+
+    @BeforeAll
+    public static void startMockServer() throws IOException {
+        mockServer = new MockWebServer();
+        MockResponse mockResponse = new MockResponse()
+                .setBody(readFixture());
+        mockServer.enqueue(mockResponse);
+        mockServer.start();
+    }
 
     @AfterAll
     public static void stopMockServer() throws IOException {
         mockServer.shutdown();
-    }
-
-
-    @AfterEach
-    public void stopServer() {
-        app.stop();
     }
 
 
@@ -104,15 +105,15 @@ public final class AppTest {
     }
 
     @Test
-    public void testCheck() throws SQLException {
-        var url = new Url(basicUrl);
-        DataRepository.save(url);
+    public void testCheck() throws SQLException, NullPointerException {
+        var url = mockServer.url("/").toString().replaceAll("/$", "");
         JavalinTest.test(app, ((server, client) -> {
-            var response = client.post(NamedRoutes.urlChecks(url.getId()));
-            assertThat(response.code()).isEqualTo(200);
+            var requestBody = "url=" + url;
+            assertThat(client.post("/urls", requestBody).code()).isEqualTo(200);
         }));
 
-        var urlCheck = UrlCheckRepository.latestChecksById(url.getId()).get();
+        var actualUrl = DataRepository.findByName(url).orElse(null);
+        var urlCheck = UrlCheckRepository.findLatestChecks().get(actualUrl.getId());
         var statusCode = urlCheck.getStatusCode();
         var title = urlCheck.getTitle();
         var h1 = urlCheck.getH1();

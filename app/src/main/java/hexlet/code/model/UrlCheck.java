@@ -28,6 +28,7 @@ public class UrlCheck {
         this.description = description;
         this.createdAt = createdAt;
     }
+
 }
 
 
