@@ -57,27 +57,4 @@ public class UrlCheckRepository extends BaseRepository {
             return result;
         }
     }
-
-    public static Optional<UrlCheck> latestChecksById(Long id) throws SQLException {
-        String sql = "SELECT * FROM url_checks WHERE url_id = ? ORDER BY created_at DESC LIMIT 1";
-        try (var conn = dataSource.getConnection();
-             var stmt = conn.prepareStatement(sql)) {
-            stmt.setLong(1, id);
-            var resultSet = stmt.executeQuery();
-            while (resultSet.next()) {
-                Long idN = resultSet.getLong("id");
-                Long urlId = resultSet.getLong("url_id");
-                int statusCode = resultSet.getInt("status_code");
-                String title = resultSet.getString("title");
-                String h1 = resultSet.getString("h1");
-                String description = resultSet.getString("description");
-                Timestamp createdAt = resultSet.getTimestamp("created_at");
-
-                UrlCheck newUrlCheck = new UrlCheck(urlId, statusCode, title, h1, description, createdAt);
-                newUrlCheck.setId(idN);
-                return Optional.of(newUrlCheck);
-            }
-            return Optional.empty();
-        }
-    }
 }
