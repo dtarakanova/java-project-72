@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Test update">
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="testCheck issue fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlpageGenerated$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlpageGenerated.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlpageGenerated.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jte-classes/gg/jte/generated/ondemand/urls/JteurlsindexGenerated.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/resources/fixtures/samplepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/resources/fixtures/samplepage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,27 +245,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Add and configure form for url input">
-      <created>1708686033313</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1708686033313</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Fix checkstyle error">
-      <created>1708686162571</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1708686162571</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Save url to database">
-      <created>1708687997138</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1708687997138</updated>
     </task>
     <task id="LOCAL-00035" summary="Save url to database">
       <created>1708688044479</created>
@@ -597,7 +568,28 @@
       <option name="project" value="LOCAL" />
       <updated>1711095706388</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="testCheck issue fix">
+      <created>1711097725625</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1711097725625</updated>
+    </task>
+    <task id="LOCAL-00082" summary="testCheck issue fix">
+      <created>1711097780408</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1711097780408</updated>
+    </task>
+    <task id="LOCAL-00083" summary="testCheck issue fix">
+      <created>1711097794289</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1711097794289</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -613,7 +605,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fix DB issue" />
     <MESSAGE value="Set up jte templates and urls page" />
     <MESSAGE value="Remove checkstyle violations" />
     <MESSAGE value="JTE paths fix" />
@@ -638,6 +629,7 @@
     <MESSAGE value="Fix issues in checks test" />
     <MESSAGE value="Add SEO analysis" />
     <MESSAGE value="Test update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test update" />
+    <MESSAGE value="testCheck issue fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="testCheck issue fix" />
   </component>
 </project>
