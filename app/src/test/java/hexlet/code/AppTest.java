@@ -52,7 +52,6 @@ public final class AppTest {
     }
 
 
-
     @AfterEach
     public void stopServer() {
         app.stop();
