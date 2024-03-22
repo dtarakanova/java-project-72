@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="testCheck issue fix">
+    <list default="true" id="ca087bd2-f778-4acd-8d82-4b9aacefae2b" name="Changes" comment="Checkstyle error fix">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,27 +248,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706776771522</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Save url to database">
-      <created>1708688044479</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1708688044479</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Fix checkstyle issue">
-      <created>1708688174935</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1708688174935</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Fix checkstyle issue">
-      <created>1708688352588</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1708688352588</updated>
     </task>
     <task id="LOCAL-00038" summary="Fix checkstyle issue">
       <created>1708688367096</created>
@@ -589,7 +571,28 @@
       <option name="project" value="LOCAL" />
       <updated>1711097794289</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="testCheck issue fix">
+      <created>1711098293995</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1711098293995</updated>
+    </task>
+    <task id="LOCAL-00085" summary="testCheck issue fix">
+      <created>1711098389169</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1711098389169</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Checkstyle error fix">
+      <created>1711098516350</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1711098516350</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -605,7 +608,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Set up jte templates and urls page" />
     <MESSAGE value="Remove checkstyle violations" />
     <MESSAGE value="JTE paths fix" />
     <MESSAGE value="Main &amp; Urls pages add" />
@@ -630,6 +632,7 @@
     <MESSAGE value="Add SEO analysis" />
     <MESSAGE value="Test update" />
     <MESSAGE value="testCheck issue fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="testCheck issue fix" />
+    <MESSAGE value="Checkstyle error fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checkstyle error fix" />
   </component>
 </project>
