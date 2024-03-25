@@ -2,7 +2,7 @@ package hexlet.code.controller;
 import hexlet.code.model.Url;
 import hexlet.code.model.UrlCheck;
 import hexlet.code.model.UrlsPage;
-import hexlet.code.repository.DataRepository;
+import hexlet.code.repository.UrlRepository;
 import hexlet.code.repository.UrlCheckRepository;
 import hexlet.code.util.NamedRoutes;
 import io.javalin.http.Context;
@@ -38,14 +38,14 @@ public class UrlsController {
                 )
                 .toLowerCase();
 
-        Url url = DataRepository.isPresent(normalizedUrl).orElse(null);
+        Url url = UrlRepository.isPresent(normalizedUrl).orElse(null);
 
         if (url != null) {
             ctx.sessionAttribute("flash", "Страница уже существует");
             ctx.sessionAttribute("flash-type", "warning");
         } else {
             Url newUrl = new Url(normalizedUrl);
-            DataRepository.save(newUrl);
+            UrlRepository.save(newUrl);
             ctx.sessionAttribute("flash", "Страница успешно добавлена");
             ctx.sessionAttribute("flash-type", "success");
         }
@@ -53,7 +53,7 @@ public class UrlsController {
     }
 
     public static void showUrls(Context ctx) throws SQLException {
-        List<Url> urls = DataRepository.getEntities();
+        List<Url> urls = UrlRepository.getEntities();
         Map<Long, UrlCheck> latestChecks = UrlCheckRepository.findLatestChecks();
         UrlsPage page = new UrlsPage(urls, latestChecks);
         page.setFlash(ctx.consumeSessionAttribute("flash"));

@@ -3,7 +3,7 @@ package hexlet.code.controller;
 import hexlet.code.model.Url;
 import hexlet.code.model.UrlCheck;
 import hexlet.code.model.UrlPage;
-import hexlet.code.repository.DataRepository;
+import hexlet.code.repository.UrlRepository;
 import hexlet.code.repository.UrlCheckRepository;
 import hexlet.code.util.NamedRoutes;
 import io.javalin.http.Context;
@@ -24,9 +24,9 @@ public class UrlPageController {
 
     public static void showUrlPage(Context ctx) throws SQLException {
         long id = ctx.pathParamAsClass("id", Long.class).getOrDefault(null);
-        Url url = DataRepository.find(id)
+        Url url = UrlRepository.find(id)
                 .orElseThrow(() -> new NotFoundResponse("Url with id: " + id + " not found"));
-        List<UrlCheck> urlChecks = DataRepository.findByUrlId(id);
+        List<UrlCheck> urlChecks = UrlRepository.findByUrlId(id);
         UrlPage page = new UrlPage(url, urlChecks);
         page.setFlash(ctx.consumeSessionAttribute("flash"));
         page.setFlashType(ctx.consumeSessionAttribute("flash-type"));
@@ -35,7 +35,7 @@ public class UrlPageController {
 
     public static void urlCheck(Context ctx) throws SQLException {
         long id = ctx.pathParamAsClass("id", Long.class).getOrDefault(null);
-        Url url = DataRepository.findById(id)
+        Url url = UrlRepository.findById(id)
                 .orElseThrow(() -> new NotFoundResponse("Url with id: " + id + " not found"));
 
         try {

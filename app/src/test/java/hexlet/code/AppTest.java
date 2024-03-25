@@ -3,7 +3,7 @@ package hexlet.code;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import hexlet.code.model.Url;
-import hexlet.code.repository.DataRepository;
+import hexlet.code.repository.UrlRepository;
 import hexlet.code.repository.UrlCheckRepository;
 import io.javalin.Javalin;
 import io.javalin.testtools.JavalinTest;
@@ -88,7 +88,7 @@ public final class AppTest {
     @Test
     public void testUrlPage() throws SQLException {
         var url = new Url("urlname");
-        DataRepository.save(url);
+        UrlRepository.save(url);
         JavalinTest.test(app, ((server, client) -> {
             var response = client.get("/urls/" + url.getId());
             assertThat(response.code()).isEqualTo(200);
@@ -110,7 +110,7 @@ public final class AppTest {
             var requestBody = "url=" + url;
             assertThat(client.post("/urls", requestBody).code()).isEqualTo(200);
 
-            var actualUrl = DataRepository.findByName(url).orElse(null);
+            var actualUrl = UrlRepository.findByName(url).orElse(null);
             client.post("/urls/" + actualUrl.getId() + "/checks");
             var responce = client.get("/urls/" + actualUrl.getId());
             assertThat(responce.code()).isEqualTo(200);
