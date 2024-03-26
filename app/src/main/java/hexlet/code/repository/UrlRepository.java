@@ -1,7 +1,6 @@
 package hexlet.code.repository;
 
 import hexlet.code.model.Url;
-import hexlet.code.model.UrlCheck;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -71,9 +70,9 @@ public class UrlRepository extends BaseRepository {
     public static Optional<Url> find(Long id) throws SQLException {
         String sql = "SELECT * FROM urls WHERE id = ?";
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setLong(1, id);
-            ResultSet resultSet = stmt.executeQuery();
+             PreparedStatement preparedStatement = conn.prepareStatement(sql)) {
+            preparedStatement.setLong(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 String name = resultSet.getString("name");
                 Timestamp createdAt = resultSet.getTimestamp("created_at");
@@ -105,33 +104,12 @@ public class UrlRepository extends BaseRepository {
         }
     }
 
-    public static List<UrlCheck> findByUrlId(Long urlId) throws SQLException {
-        String sql = "SELECT * FROM url_checks WHERE url_id = ? ORDER BY id";
-        try (Connection conn = dataSource.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setLong(1, urlId);
-            ResultSet resultSet = stmt.executeQuery();
-            ArrayList<UrlCheck> result = new ArrayList<>();
-
-            while (resultSet.next()) {
-                int statusCode = resultSet.getInt("status_code");
-                String title = resultSet.getString("title");
-                String h1 = resultSet.getString("h1");
-                String description = resultSet.getString("description");
-                Timestamp createdAt = resultSet.getTimestamp("created_at");
-                UrlCheck urlCheck = new UrlCheck(urlId, statusCode, title, h1, description, createdAt);
-                result.add(urlCheck);
-            }
-            return result;
-        }
-    }
-
     public static Optional<Url> findByName(String urlName) throws SQLException {
         String sql = "SELECT * FROM urls WHERE name = ?";
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, urlName);
-            ResultSet resultSet = stmt.executeQuery();
+             PreparedStatement preparedStatement = conn.prepareStatement(sql)) {
+            preparedStatement.setString(1, urlName);
+            ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 String name = resultSet.getString("name");
                 Timestamp createdAt = resultSet.getTimestamp("created_at");

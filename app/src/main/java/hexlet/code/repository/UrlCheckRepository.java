@@ -9,7 +9,9 @@ import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class UrlCheckRepository extends BaseRepository {
@@ -50,8 +52,31 @@ public class UrlCheckRepository extends BaseRepository {
                 String h1 = resultSet.getString("h1");
                 String description = resultSet.getString("description");
                 Timestamp createdAt = resultSet.getTimestamp("created_at");
-                UrlCheck urlCheck = new UrlCheck(urlId, statusCode, title, h1, description, createdAt);
+                UrlCheck urlCheck = new UrlCheck(statusCode, title, h1, description);
+                urlCheck.setCreatedAt(createdAt);
                 result.put(urlId, urlCheck);
+            }
+            return result;
+        }
+    }
+
+    public static List<UrlCheck> findByUrlId(Long urlId) throws SQLException {
+        String sql = "SELECT * FROM url_checks WHERE url_id = ? ORDER BY id";
+        try (Connection conn = dataSource.getConnection();
+             PreparedStatement preparedStatement = conn.prepareStatement(sql)) {
+            preparedStatement.setLong(1, urlId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            ArrayList<UrlCheck> result = new ArrayList<>();
+
+            while (resultSet.next()) {
+                int statusCode = resultSet.getInt("status_code");
+                String title = resultSet.getString("title");
+                String h1 = resultSet.getString("h1");
+                String description = resultSet.getString("description");
+                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                UrlCheck urlCheck = new UrlCheck(statusCode, title, h1, description);
+                urlCheck.setCreatedAt(createdAt);
+                result.add(urlCheck);
             }
             return result;
         }

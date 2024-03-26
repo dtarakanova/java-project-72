@@ -27,7 +27,7 @@ public class UrlPageController {
         long id = ctx.pathParamAsClass("id", Long.class).getOrDefault(null);
         Url url = UrlRepository.find(id)
                 .orElseThrow(() -> new NotFoundResponse("Url with id: " + id + " not found"));
-        List<UrlCheck> urlChecks = UrlRepository.findByUrlId(id);
+        List<UrlCheck> urlChecks = UrlCheckRepository.findByUrlId(id);
         UrlPage page = new UrlPage(url, urlChecks);
         page.setFlash(ctx.consumeSessionAttribute("flash"));
         page.setFlashType(ctx.consumeSessionAttribute("flash-type"));
@@ -42,16 +42,17 @@ public class UrlPageController {
         try {
             HttpResponse<String> response = Unirest.get(url.getName()).asString();
             Document doc = Jsoup.parse(response.getBody());
-            Long urlId = url.getId();
             int statusCode = response.getStatus();
-            Timestamp createdAt = new Timestamp(System.currentTimeMillis());
+            Timestamp dateandtime = new Timestamp(System.currentTimeMillis());
             String title = doc.title();
             Element h1El = doc.selectFirst("h1");
             String h1 = h1El == null ? "" : h1El.text();
             Element descr = doc.selectFirst("meta[name=description]");
             String description = descr == null ? "" : descr.attr("content");
-            UrlCheck newCheck = new UrlCheck(urlId, statusCode, title, h1, description, createdAt);
+            UrlCheck newCheck = new UrlCheck(statusCode, title, h1, description);
+
             newCheck.setUrlId(id);
+            newCheck.setCreatedAt(dateandtime);
             UrlCheckRepository.saveUrlCheck(newCheck);
             ctx.sessionAttribute("flash", "Страница успешно проверена");
             ctx.sessionAttribute("flash-type", "success");
