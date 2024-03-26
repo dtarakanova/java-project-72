@@ -1,6 +1,6 @@
 package hexlet.code.controller;
 
-import hexlet.code.model.MainPage;
+import hexlet.code.dto.MainPage;
 import io.javalin.http.Context;
 
 import java.util.Collections;

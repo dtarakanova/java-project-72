@@ -1,4 +1,4 @@
-@import hexlet.code.model.UrlPage
+@import hexlet.code.dto.UrlPage
 @import hexlet.code.util.NamedRoutes
 @import java.time.format.DateTimeFormatter
 @param UrlPage page

@@ -1,5 +1,5 @@
 @import gg.jte.Content
-@import hexlet.code.model.BasicPage
+@import hexlet.code.dto.BasicPage
 @import hexlet.code.util.NamedRoutes
 
 @param BasicPage page = null
