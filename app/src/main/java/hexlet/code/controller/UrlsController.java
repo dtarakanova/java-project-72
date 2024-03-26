@@ -38,7 +38,7 @@ public class UrlsController {
                 )
                 .toLowerCase();
 
-        Url url = UrlRepository.isPresent(normalizedUrl).orElse(null);
+        Url url = UrlRepository.findByName(normalizedUrl).orElse(null);
 
         if (url != null) {
             ctx.sessionAttribute("flash", "Страница уже существует");

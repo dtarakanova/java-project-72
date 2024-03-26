@@ -50,25 +50,6 @@ public class UrlRepository extends BaseRepository {
         }
     }
 
-    public static Optional<Url> isPresent(String url) throws SQLException {
-        String sql = "SELECT * FROM urls WHERE name = ?";
-        try (var conn = dataSource.getConnection();
-             var preparedStatement = conn.prepareStatement(sql)) {
-            preparedStatement.setString(1, url);
-            var resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                String name = resultSet.getString("name");
-                Timestamp dateandtime = resultSet.getTimestamp("created_at");
-                long id = resultSet.getLong("id");
-                Url newUrl = new Url(name);
-                newUrl.setId(id);
-                newUrl.setCreatedAt(dateandtime);
-                return Optional.of(newUrl);
-            }
-            return Optional.empty();
-        }
-    }
-
     public static Optional<Url> find(Long id) throws SQLException {
         String sql = "SELECT * FROM urls WHERE id = ?";
         try (Connection conn = dataSource.getConnection();
