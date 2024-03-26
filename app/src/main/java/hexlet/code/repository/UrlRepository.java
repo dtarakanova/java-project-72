@@ -15,6 +15,7 @@ import java.util.Optional;
 public class UrlRepository extends BaseRepository {
     public static void save(Url url) throws SQLException {
         String sql = "INSERT INTO urls(name, created_at) VALUES(?,?)";
+        Timestamp dateandtime = new Timestamp(System.currentTimeMillis());
         try (var conn = dataSource.getConnection();
              var preparedStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             preparedStatement.setString(1, url.getName());
@@ -23,6 +24,7 @@ public class UrlRepository extends BaseRepository {
             var generatedKeys = preparedStatement.getGeneratedKeys();
             if (generatedKeys.next()) {
                 url.setId(generatedKeys.getLong(1));
+                url.setCreatedAt(dateandtime);
             } else {
                 throw new SQLException("Ошибка при сохранении");
             }
@@ -38,10 +40,10 @@ public class UrlRepository extends BaseRepository {
             while (resultSet.next()) {
                 long id = resultSet.getLong("id");
                 String name = resultSet.getString("name");
-                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                Timestamp dateandtime = resultSet.getTimestamp("created_at");
                 Url url = new Url(name);
                 url.setId(id);
-                url.setCreatedAt(createdAt);
+                url.setCreatedAt(dateandtime);
                 result.add(url);
             }
             return result;
@@ -51,16 +53,16 @@ public class UrlRepository extends BaseRepository {
     public static Optional<Url> isPresent(String url) throws SQLException {
         String sql = "SELECT * FROM urls WHERE name = ?";
         try (var conn = dataSource.getConnection();
-             var stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, url);
-            var resultSet = stmt.executeQuery();
+             var preparedStatement = conn.prepareStatement(sql)) {
+            preparedStatement.setString(1, url);
+            var resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 String name = resultSet.getString("name");
-                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                Timestamp dateandtime = resultSet.getTimestamp("created_at");
                 long id = resultSet.getLong("id");
                 Url newUrl = new Url(name);
                 newUrl.setId(id);
-                newUrl.setCreatedAt(createdAt);
+                newUrl.setCreatedAt(dateandtime);
                 return Optional.of(newUrl);
             }
             return Optional.empty();
@@ -75,10 +77,10 @@ public class UrlRepository extends BaseRepository {
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 String name = resultSet.getString("name");
-                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                Timestamp dateandtime = resultSet.getTimestamp("created_at");
                 Url url = new Url(name);
                 url.setId(id);
-                url.setCreatedAt(createdAt);
+                url.setCreatedAt(dateandtime);
                 return Optional.of(url);
             }
             return Optional.empty();
@@ -88,16 +90,16 @@ public class UrlRepository extends BaseRepository {
     public static Optional<Url> findById(Long id) throws SQLException {
         String sql = "SELECT * FROM urls WHERE id = ?";
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setLong(1, id);
-            ResultSet resultSet = stmt.executeQuery();
+             PreparedStatement preparedStatement = conn.prepareStatement(sql)) {
+            preparedStatement.setLong(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 String name = resultSet.getString("name");
-                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                Timestamp dateandtime = resultSet.getTimestamp("created_at");
                 long urlId = resultSet.getLong("id");
                 Url url = new Url(name);
                 url.setId(urlId);
-                url.setCreatedAt(createdAt);
+                url.setCreatedAt(dateandtime);
                 return Optional.of(url);
             }
             return Optional.empty();
@@ -112,11 +114,11 @@ public class UrlRepository extends BaseRepository {
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 String name = resultSet.getString("name");
-                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                Timestamp dateandtime = resultSet.getTimestamp("created_at");
                 long id = resultSet.getLong("id");
                 Url url = new Url(name);
                 url.setId(id);
-                url.setCreatedAt(createdAt);
+                url.setCreatedAt(dateandtime);
                 return Optional.of(url);
             }
             return Optional.empty();
