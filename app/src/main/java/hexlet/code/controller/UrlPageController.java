@@ -57,7 +57,7 @@ public class UrlPageController {
             ctx.sessionAttribute("flash", "Страница успешно проверена");
             ctx.sessionAttribute("flash-type", "success");
         } catch (UnirestException e) {
-            ctx.sessionAttribute("flash", "Некорректный адрес");
+            ctx.sessionAttribute("flash", "Некорректный URL");
             ctx.sessionAttribute("flash-type", "danger");
         } catch (Exception e) {
             ctx.sessionAttribute("flash", e.getMessage());

@@ -6,11 +6,6 @@
 @template.layout.page(
 page = page,
 content = @`
-    @if(page != null && page.getFlash() != null)
-        <div class="rounded-0 m-0 alert alert-danger alert-${page.getFlashType()}" role="alert">
-            ${page.getFlash()}
-        </div>
-    @endif
     <section>
         <div class="container-fluid bg-dark p-5">
             <div class="row">
