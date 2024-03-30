@@ -98,8 +98,8 @@ public final class AppTest {
     @Test
     public void testUrlNotFound() {
         JavalinTest.test(app, ((server, client) -> {
-            var response = client.get("/urls/999999");
-            client.delete("/urls/999999");
+            var response = client.delete("/urls/999999");
+            client.get("/urls/999999");
             assertThat(response.code()).isEqualTo(404);
         }));
     }
@@ -115,7 +115,7 @@ public final class AppTest {
             client.post("/urls/" + actualUrl.getId() + "/checks");
             var responce = client.get("/urls/" + actualUrl.getId());
             assertThat(responce.code()).isEqualTo(200);
-            assert responce.body() != null;
+            assertThat(responce.body() != null);
             assertThat(responce.body().string()).contains(url);
             var urlCheck = UrlCheckRepository.findLatestChecks().get(actualUrl.getId());
             var statusCode = urlCheck.getStatusCode();
