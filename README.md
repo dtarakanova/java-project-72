@@ -28,7 +28,8 @@ Page analyzer executes basic SEO analysis of any given website, defining:
 * Jsoup
 
 ### Demonstration
-1. ![Main page](https://monosnap.com/file/TY1YGjlnwelrbcXBZg5yndszrOkGE5)
+1. Main page
+   <img src="https://monosnap.com/file/TY1YGjlnwelrbcXBZg5yndszrOkGE5"/>
 
 
 
