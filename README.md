@@ -26,11 +26,3 @@ Page analyzer executes basic SEO analysis of any given website, defining:
 * Bootstrap
 * Unirest
 * Jsoup
-
-### Demonstration
-1. Main page
-   <img src="https://monosnap.com/file/TY1YGjlnwelrbcXBZg5yndszrOkGE5"/>
-
-
-
-
